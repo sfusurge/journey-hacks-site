@@ -28,6 +28,12 @@
 
     // use $inspect to print to console whenever state inside changes
     $inspect(`highlighted changed ($inspect): ${highlighted}`);
+
+    function toggleHighlight() {
+        // state update is just variable assignment
+        // this triggers rerender
+        highlighted = !highlighted;
+    }
 </script>
 
 <!-- declare "snippets" to reuse -->
@@ -41,12 +47,19 @@
 
 <!-- use class:<css class name>=<boolean> to toggle css class based on a boolean -->
 <div class="container" class:highlight={highlighted}>
-    <div class="label">
+    <!-- event functions same as React -->
+    <div class="label" onclick={toggleHighlight}>
         <!-- template similar to react -->
         Name: {name}
     </div>
 
-    <div class="label">
+    <!-- inline function works too -->
+    <div
+        class="label"
+        onclick={() => {
+            console.log("bleh");
+        }}
+    >
         Age: {age}
     </div>
 
@@ -73,7 +86,7 @@
         border: 2px solid red;
     }
 
-    .highlight{
+    .highlight {
         border-color: blue;
     }
 </style>

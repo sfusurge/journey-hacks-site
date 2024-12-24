@@ -4,7 +4,8 @@ Static site development for Journey hacks 2025.
 ## Setup
 1. pull the repo with your method of choice
 2. run `npm install` in repo to get dependencies 
-3. install svelte's vacode extension: @insertlinkhere
+3. install svelte's vacode extension: [Extention](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+    + This [Snippet extention](https://marketplace.visualstudio.com/items?itemName=MrAmericanMike.sveltesnippets) might be useful too.
 4. run `npm run dev` to start the dev server.
 
 
@@ -54,3 +55,9 @@ When feature in your branch is ready to be deployed to dev/preview, do the follo
 2. resolve any conflicts from the update 
 3. test locally and check if everything looks as intended still
 4. merge your branch into dev.
+
+
+## Deployment
+For now the site will be hosted on vercel, with vercel analytics enabled.
+* prod branch, what the public see. Pushing to this branch immediately deploys
+* dev branch, for internal preview purposes. Pushing to this branch also immediately deploys, so pushing to dev should infrequent. 
