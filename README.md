@@ -1,6 +1,13 @@
 # Journey-hacks-site
 Static site development for Journey hacks 2025.
 
+## Setup
+1. pull the repo with your method of choice
+2. run `npm install` in repo to get dependencies 
+3. install svelte's vacode extension: @insertlinkhere
+4. run `npm run dev` to start the dev server.
+
+
 ## Useful resources
 * [Figma designs](https://www.figma.com/design/2c0neayYTzaNd4gWoRHRms/JourneyHacks-2025?node-id=66-2&p=f&t=mwEcRce7zsrZ5S9o-0)
 * [Vector assets exports (from figma)](https://drive.google.com/drive/folders/1I1xPximLWm2oZPk4VxsPAUVFpM_wQuz5?usp=sharing)
@@ -37,3 +44,13 @@ Static site development for Journey hacks 2025.
 ```
 
 ## Workflow
+Since the scope of the site is limited, we won't be using a issue/PR system. Instead, we will have:
+* prod branch, publicly deployed 
+* dev branch, deployed and used for internal preview. (dev will be the default branch)
+* developer name branch, each developer codes in their own branch.
+
+When feature in your branch is ready to be deployed to dev/preview, do the following:
+1. update from dev
+2. resolve any conflicts from the update 
+3. test locally and check if everything looks as intended still
+4. merge your branch into dev.
