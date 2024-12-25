@@ -7,6 +7,6 @@
 
 <Example age={20} name="Bill" friends={["Alice", "Bob", "Charlie"]}></Example>
 
-<script>
+<style>
     
-</script>
+</style>
