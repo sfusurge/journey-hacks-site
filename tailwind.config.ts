@@ -1,11 +1,15 @@
 import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
-
+import defaultTheme from 'tailwindcss/defaultTheme';
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
 
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        sans: ["Neue", ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
 
   plugins: [typography]

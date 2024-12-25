@@ -46,7 +46,7 @@
 <!-- Markup -->
 
 <!-- use class:<css class name>=<boolean> to toggle css class based on a boolean -->
-<div class="container" class:highlight={highlighted}>
+<div class="container font-sans" class:highlight={highlighted}>
     <!-- event functions same as React -->
     <div class="label" onclick={toggleHighlight}>
         <!-- template similar to react -->
