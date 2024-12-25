@@ -58,6 +58,9 @@ When feature in your branch is ready to be deployed to dev/preview, do the follo
 
 
 ## Deployment
-For now the site will be hosted on vercel, with vercel analytics enabled.
-* prod branch, what the public see. Pushing to this branch immediately deploys
-* dev branch, for internal preview purposes. Pushing to this branch also immediately deploys, so pushing to dev should infrequent. 
+The site will be deployed on Netlify.
+* `prod` branch is the public branch
+    + pushing to prod requires at least 1 review in PR, which gets a review deployment
+* `preview` for internal preview
+    + pushing to preview cause a deployment, No PR
+* `dev` for merging development progress, no deploys in this branch 
