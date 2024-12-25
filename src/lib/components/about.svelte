@@ -10,7 +10,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       position: relative;
     }
@@ -52,6 +52,7 @@
       font-size: 30px;
       font-weight: bold;
       z-index: 2;
+      font-family: 'Coiny', sans-serif;
     }
   
     .section {
@@ -77,7 +78,7 @@
       display: none;
     }
   
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 900px) {
       .background {
         background-image: none;
         height: auto;

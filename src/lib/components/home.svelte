@@ -7,7 +7,7 @@
   
     .background {
       background-color: #8F6455;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -35,17 +35,21 @@
       max-width: 300px;
       text-align: right;
       margin-top: 40px;
-      margin-right: 50px;
       position: relative;
+      right: 10%;
       z-index: 2;
+      font-family: 'Coiny', sans-serif;
+      line-height: 1.3;
     }
   
     .year {
       text-align: right;
+      color: #664848;
+      font-family: 'Coiny', sans-serif;
     }
   
     .big-text {
-      font-size: 70px;
+      font-size: 80px;
       color: #664848;
     }
   
@@ -53,17 +57,23 @@
       .title {
         position: absolute;
         top: 20px;
-        left: 50%;
+        left: 35%;
         transform: translateX(-50%);
         text-align: center;
-        margin-top: 0;
+        margin-top: 20px;
         margin-right: 0;
         margin-left: 0;
         width: auto;
+        line-height: 0.8;
       }
   
       .big-text {
-        font-size: 40px;
+        font-size: 60px;
+      }
+      
+      .year {
+        position: absolute;
+        left: 140%;
       }
     }
   </style>
@@ -72,7 +82,7 @@
     <div class="overlay"></div>
   
     <div class="title">
-      <p class="big-text">Journey Hacks</p>
+      <p class="big-text">JOURNEY HACKS</p>
       <p class="year">2025</p>
     </div>
   </div>
