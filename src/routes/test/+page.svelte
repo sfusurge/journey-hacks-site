@@ -3,19 +3,27 @@
 
 
 <script lang="ts">
+    import Book from "$lib/components/book/Book.svelte";
     
     
+    let imgUrls = [...Array(7).keys()].map(idx => `/bookpages/${idx + 1}.webp`)
 </script>
 
-<!-- Markup -->
+<div class="container">
+    
+    <Book imgUrls={imgUrls}></Book>
+</div>
+
 
 <style>
     .container{
+        position: relative;
         min-width: 400px;
-        height: auto;
+       height: 200px;
         display: block;
 
-        resize: horizontal;
+        overflow: hidden;
+        resize: both;
         border: 2px solid brown;
     }
 </style>

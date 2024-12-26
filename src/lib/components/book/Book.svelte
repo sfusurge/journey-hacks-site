@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { page } from "$app/stores";
     import BookPage from "./BookPage.svelte";
 
     interface BookType {
@@ -47,9 +46,9 @@
 
     const transitionTime = 1000;
     export function nextPage() {
-        // if (transitionPage) {
-        //     return; // block transition if there already one.
-        // }
+        if (transitionPage) {
+            return; // block transition if there already one.
+        }
 
         const nextPage = pages[index + 1];
         nextUrl = nextPage ? nextPage.frontPage : "";
@@ -61,14 +60,14 @@
 
         setTimeout(() => {
             prevUrl = transitionPage?.backPage;
-            // transitionPage = undefined;
+            transitionPage = undefined;
         }, transitionTime );
     }
 
     export function prevPage() {
-        // if (transitionPage) {
-        //     return; // block transition if there already one.
-        // }
+        if (transitionPage) {
+            return; // block transition if there already one.
+        }
 
         const prevPage = pages[index -2];
         prevUrl = prevPage ? prevPage.backPage : "";
@@ -77,10 +76,17 @@
 
         setTimeout(() => {
             nextUrl = transitionPage?.frontPage;
-            // transitionPage = undefined;
+            transitionPage = undefined;
         }, transitionTime );
     }
 </script>
+
+<svelte:head>
+    {#each imgUrls as img, index}
+        <!-- preload all the images, but only the first 2 (initially visible) images needs to load immediately -->
+        <link rel="preload" href={img} as="image" fetchpriority={index < 2 ? "high" : "low"}>
+    {/each}
+</svelte:head>
 
 <div class="bookRoot">
     <BookPage
