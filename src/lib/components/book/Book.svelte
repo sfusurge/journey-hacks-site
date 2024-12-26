@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import FlexibleBookPage from "./FlexibleBookPage.svelte";
+    import BookPage from "./BookPage.svelte";
 
     interface BookType {
         imgUrls: string[];
@@ -83,12 +83,12 @@
 </script>
 
 <div class="bookRoot">
-    <FlexibleBookPage
+    <BookPage
         frontUrl={transitionPage ? transitionPage.frontPage : ""}
         backUrl={transitionPage ? (transitionPage.backPage ?? "") : ""}
         {index}
         animationTime={transitionTime}
-    ></FlexibleBookPage>
+    ></BookPage>
 
     <div class="prevPage" style="--background: url({prevUrl})"></div>
 

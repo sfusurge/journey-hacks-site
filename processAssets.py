@@ -20,7 +20,9 @@ queue: List[str] = []
 nameToSize = dict()
 print("Process the following files:")
 
-for file in glob.glob(f"{relativePath}/**/*.png", recursive=True) + glob.glob(f"{relativePath}/**/*.jpg", recursive=True):
+for file in glob.glob(f"{relativePath}/**/*.png", recursive=True) + glob.glob(
+    f"{relativePath}/**/*.jpg", recursive=True
+):
     queue.append(file)
     nameToSize[file] = os.path.getsize(file) // 1024
 
@@ -35,8 +37,9 @@ if abort:
 for file in queue:
     img: Image.Image = Image.open(file)
     iccProfile = img.info.get("icc_profile")
-    iccBytes = io.BytesIO(iccProfile)
-    colorProfile = ImageCms.ImageCmsProfile(iccBytes)
+    if iccProfile:
+        iccBytes = io.BytesIO(iccProfile)
+        colorProfile = ImageCms.ImageCmsProfile(iccBytes)
 
     newPath = file.rstrip(".jpg").rstrip(".png") + ".webp"
     if resize > 0:
@@ -45,10 +48,17 @@ for file in queue:
             (resize, int((resize / img.width) * img.height)), Image.Resampling.LANCZOS, reducing_gap=2
         )  # resize the img such that width is "resize" and height is scaled to keep aspect ratio
     print(f"saving image: {img.width}, {img.height}")
-    img.save(newPath, "webp", optimize=True, quality=quality, icc_profile=colorProfile.tobytes())
+    if iccProfile:
+        img.save(newPath, "webp", optimize=True, quality=quality, icc_profile=colorProfile.tobytes())
+    else:
+        img.save(newPath, "webp", optimize=True, quality=quality)
+
     print(f"Processed file {file}, {nameToSize[file]}kb -> {os.path.getsize(newPath) // 1024}kb")
 
 for file in queue:
     if deleteOriginal:
         print("deleting ", file)
         os.remove(file)
+
+
+

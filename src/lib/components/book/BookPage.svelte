@@ -115,7 +115,6 @@
 
         transform-style: preserve-3d;
         transform-origin: left;
-  
     }
 
     .pageSegment::before {
