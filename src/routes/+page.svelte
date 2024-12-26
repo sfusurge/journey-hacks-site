@@ -1,12 +1,10 @@
 <script lang="ts">
     import Example from "$lib/components/example.svelte";
+    import Home from "$lib/components/home.svelte";
+    import Apply from "$lib/components/apply.svelte";
+    import About from "$lib/components/about.svelte"
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
-
-<Example age={20} name="Bill" friends={["Alice", "Bob", "Charlie"]}></Example>
-
-<style>
-    
-</style>
+<Home />
+<Apply />
+<About />
