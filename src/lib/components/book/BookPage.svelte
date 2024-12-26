@@ -4,11 +4,13 @@
         backUrl,
         index,
         animationTime,
+        singlePageMode,
     }: {
         frontUrl: string;
         backUrl: string;
         index: number;
         animationTime: number;
+        singlePageMode: boolean;
     } = $props();
 
     let currentIndex = index;
@@ -34,16 +36,16 @@
         }, animationTime);
     });
 
-    let imgWidth: number = $state(0);
+    let angle = singlePageMode ? 0 : 4;
 
-    $inspect(animationState === undefined, frontUrl, backUrl);
+    let imgWidth: number = $state(0);
 </script>
 
 <div
     class="pageRoot"
     class:flip={animationState !== undefined}
     class:reverse={animationState === "backward"}
-    style="--parentWidth:{imgWidth}px; --duration: {animationTime}ms"
+    style="--parentWidth:{imgWidth}px; --duration: {animationTime}ms; --angle0:{-angle}deg; --angle1:{-180 + angle}deg;"
 >
     <div
         class="pageSide frontSide"
@@ -72,15 +74,18 @@
 <style>
     .pageRoot {
         position: absolute;
-        top: 0;
+        top: 0%;
         left: 50%;
         height: 100%;
         width: 50%;
         transform-origin: left;
         transform-style: preserve-3d;
+
         z-index: 100;
-        transition: transform var(--duration) ease-out;
         opacity: 0;
+
+        pointer-events: none;
+
     }
 
     .pageRoot.flip {
@@ -145,16 +150,16 @@
         background-size: 800% 100%;
         background-position-x: calc(-1 * (7 - var(--idx)) * 100%);
         transform-origin: center;
-        transform: rotateY(180deg) scaleX(1.02);
+        transform: rotateY(180deg) scaleX(1.01);
         backface-visibility: hidden;
     }
 
     .flip > .pageSide * {
-        animation: segmentAnimation var(--duration) 1 ease-out;
+        animation: segmentAnimation var(--duration) 1 ease;
     }
 
     .reverse > .pageSide * {
-        animation: reverseSegmentAnimation var(--duration) 1 ease-out;
+        animation: reverseSegmentAnimation var(--duration) 1 ease;
     }
 
     .flip {
@@ -170,7 +175,7 @@
             transform: rotateY(0);
         }
         50% {
-            transform: rotateY(12deg);
+            transform: rotateY(10deg);
         }
     }
 
@@ -180,25 +185,25 @@
             transform: rotateY(0);
         }
         50% {
-            transform: rotateY(-12deg);
+            transform: rotateY(-10deg);
         }
     }
 
     @keyframes pageAnimation {
         0% {
-            transform: rotateY(0);
+            transform: rotateY(var(--angle0));
         }
         100% {
-            transform: rotateY(-180deg);
+            transform: rotateY(var(--angle1));
         }
     }
 
     @keyframes reversePageAnimation {
         0% {
-            transform: rotateY(-180deg);
+            transform: rotateY(var(--angle1));
         }
         100% {
-            transform: rotateY(0);
+            transform: rotateY(var(--angle0));
         }
     }
 </style>
