@@ -4,12 +4,12 @@
     let imgUrls = [...Array(7).keys()].map((idx) => `/bookpages/${idx + 1}.webp`);
 </script>
 
-<div class="container">
-    <Book backUrl={"bookpages/0.webp"} {imgUrls} singlePageMode={false}></Book>
+<div class="bleh">
+    <Book backUrl={"bookpages/0.webp"} {imgUrls} singlePageMode={true}></Book>
 </div>
 
 <style>
-    .container {
+    .bleh {
         position: relative;
         min-width: 400px;
         height: auto;
@@ -18,5 +18,7 @@
         overflow: hidden;
         resize: both;
         border: 2px solid brown;
+
+        padding: 5rem;
     }
 </style>

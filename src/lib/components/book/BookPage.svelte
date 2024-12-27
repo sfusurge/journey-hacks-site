@@ -36,7 +36,7 @@
         }, animationTime);
     });
 
-    let angle = singlePageMode ? 0 : 4;
+    let angle = $derived(singlePageMode ? 0 : 4);
 
     let imgWidth: number = $state(0);
 </script>
@@ -150,7 +150,7 @@
         background-size: 800% 100%;
         background-position-x: calc(-1 * (7 - var(--idx)) * 100%);
         transform-origin: center;
-        transform: rotateY(180deg) scaleX(1.01);
+        transform: rotateY(180deg) scaleX(1.012);
         backface-visibility: hidden;
     }
 
