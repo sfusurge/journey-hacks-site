@@ -18,11 +18,17 @@
         font-weight: 500;
         font-family: "Coiny", sans-serif;
         width: fit-content;
- 
 
         line-height: 100%;
-        padding:3rem;
+        padding: 3rem;
 
         transform: rotate(-7deg);
+        margin: 1rem;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .labelContainer {
+            font-size: 35px;
+        }
     }
 </style>

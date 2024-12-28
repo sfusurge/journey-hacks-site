@@ -24,4 +24,11 @@
     .labelContainer{
         margin-left: 3rem;
     }
+
+    @media only screen and (max-width: 1200px) {
+        .labelContainer {
+            margin-left: 1rem;
+
+        }
+    }
 </style>
