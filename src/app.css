@@ -1,15 +1,20 @@
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 @layer base {
-    @font-face {
-        font-family: "Neue";
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url("/fonts/Neue.ttf") format("opentype");
-    }
+  @font-face {
+    font-family: "Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/Neue.ttf") format("opentype");
+  }
+}
 
+.link {
+  color: white;
+  font-weight: 500;
+  text-decoration: underline;
+  display: block;
 }
