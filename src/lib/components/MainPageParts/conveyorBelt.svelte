@@ -1,35 +1,38 @@
-<!-- <div class="bg-[#754f4f] relative w-screen max-w-screen min-h-40 h-[30vh]">
-  <div
-    class="scroller bg-[#754f4f] min-w-[100vw] max-w-[100vw]"
-    data-direction="right"
-    data-speed="slow"
-  ></div>
+<script>
+  const imageUrls = [
+    "food-0.png",
+    "food-1.png",
+    "food-2.png",
+    "food-3.png",
+    "food-4.png",
+    "food-5.png",
+    "food-6.png",
+    "food-7.png",
+    "food-8.png",
+  ];
 
-  <div>
-    <img
-      id="wheel-1"
-      alt="wheel 1"
-      src="/conveyor-belt/wheel-2.png"
-      class="absolute origin-bottom w-[5.834%] h-auto left-[2.679%] bottom-[32%] z-10"
-    />
+  function addImages() {
+    imageUrls.forEach(function (image, index) {
+      let img = document.createElement("img");
+      img.src = "/conveyor-belt/" + imageUrls[index];
+      img.alt = "Food for the conveyor belt";
+      img.className = "w-[11.1656%] h-auto";
 
-    <img
-      alt="background"
-      src="/conveyor-belt/background.png"
-      class="absolute origin-bottom bottom-[19.335%] w-full h-auto z-0"
-    />
+      document.getElementById("images")?.appendChild(img);
+    });
+  }
 
-    <img
-      alt="foreground"
-      src="/conveyor-belt/foreground.png"
-      class="absolute origin-bottom w-full h-auto bottom-[19.335%] z-30"
-    />
-  </div>
+  // let offset = 0;
+  // function animate() {
+  //   offset -= 20;
+  //   document.getElementById("images")?.classList.add(`translateX(${offset}px)`);
 
-  <div
-    class="bg-[url('/conveyor-belt/ledge.png')] origin-bottom absolute bottom-0 h-[19.335%] max-h-[109px] object-cover w-screen max-w-screen min-w-screen bg-bottom pointer-events-none"
-  ></div>
-</div> -->
+  //   requestAnimationFrame(animate);
+  // }
+
+  setInterval(addImages, 1000);
+  // animate();
+</script>
 
 <div class="h-8 w-full bg-[#754f4f]"></div>
 
@@ -50,7 +53,7 @@
     <div
       class="scroll absolute top-[5.8%] z-50 w-screen max-w-[100vw] overflow-hidden"
     >
-      <div class="m-scroll flex gap-[4%]">
+      <div id="images" class="m-scroll flex gap-[4%]">
         <img
           alt="food 0"
           src="/conveyor-belt/food-0.png"
@@ -170,15 +173,15 @@
 </div>
 
 <style>
-  .m-scroll {
-    animation: scroll 15s linear infinite;
+  .m-scroll > img {
+    animation: scroll 5s linear infinite;
   }
 
   @keyframes scroll {
-    0% {
-      transform: translateX(0);
+    from {
+      transform: translateX(0%);
     }
-    100% {
+    to {
       transform: translateX(-100%);
     }
   }
