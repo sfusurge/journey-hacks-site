@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
   const imageUrls = [
+    // TODO switch to .svg later.
     "food-0.png",
     "food-1.png",
     "food-2.png",
@@ -11,27 +12,35 @@
     "food-8.png",
   ];
 
-  function addImages() {
-    imageUrls.forEach(function (image, index) {
-      let img = document.createElement("img");
-      img.src = "/conveyor-belt/" + imageUrls[index];
-      img.alt = "Food for the conveyor belt";
-      img.className = "w-[11.1656%] h-auto";
+  let shownImages: { url: string; imgId: number }[] = $state([]);
+  let imgIdx = $state(0); //id of the images in the each loop
 
-      document.getElementById("images")?.appendChild(img);
-    });
+  const maxCount = 10;
+  function addImages() {
+    if (Math.random() < 0.2) {
+      return;
+    }
+
+    if (shownImages.length < maxCount) {
+      shownImages.push({
+        url: imageUrls[Math.floor(Math.random() * imageUrls.length)],
+        imgId: imgIdx,
+      });
+
+      setTimeout(() => {
+        shownImages.shift();
+      }, 10000);
+
+      imgIdx++;
+    }
   }
 
-  // let offset = 0;
-  // function animate() {
-  //   offset -= 20;
-  //   document.getElementById("images")?.classList.add(`translateX(${offset}px)`);
-
-  //   requestAnimationFrame(animate);
-  // }
-
-  setInterval(addImages, 1000);
-  // animate();
+  $effect(() => {
+    /**
+     * in react you would do useEffect(()=>{...}, []); (empty dependency array means only run once onMount)
+     */
+    setInterval(addImages, 2000);
+  });
 </script>
 
 <div class="h-8 w-full bg-[#754f4f]"></div>
@@ -50,64 +59,10 @@
       class="relative w-full h-auto top-[49.3902%] z-30"
     />
 
-    <div
-      class="scroll absolute top-[5.8%] z-50 w-screen max-w-[100vw] overflow-hidden"
-    >
-      <div id="images" class="m-scroll flex gap-[4%]">
-        <img
-          alt="food 0"
-          src="/conveyor-belt/food-0.png"
-          class="w-[11.1656%] h-auto"
-        />
-
-        <img
-          alt="food 1"
-          src="/conveyor-belt/food-1.png"
-          class="w-[11.1656%] h-auto"
-        />
-
-        <img
-          alt="food 2"
-          src="/conveyor-belt/food-2.png"
-          class="w-[11.1656%] h-auto"
-        />
-
-        <img
-          alt="food 3"
-          src="/conveyor-belt/food-3.png"
-          class="w-[11.1656%] h-auto"
-        />
-
-        <img
-          alt="food 4"
-          src="/conveyor-belt/food-4.png"
-          class="w-[11.1656%] h-auto"
-        />
-
-        <img
-          alt="food 5"
-          src="/conveyor-belt/food-5.png"
-          class="w-[11.1656%] h-auto"
-        />
-
-        <img
-          alt="food 6"
-          src="/conveyor-belt/food-6.png"
-          class="w-[11.1656%] h-auto"
-        />
-
-        <img
-          alt="food 7"
-          src="/conveyor-belt/food-7.png"
-          class="w-[11.1656%] h-auto"
-        />
-
-        <img
-          alt="food 8"
-          src="/conveyor-belt/food-8.png"
-          class="w-[11.1656%] h-auto"
-        />
-      </div>
+    <div class="scroll absolute top-[5.8%] z-50 overflow-hidden h-full" style=" width: 100%; max-width: 100dvw;">
+      {#each shownImages as foodInfo (foodInfo.imgId)}
+        <img src="/conveyor-belt/{foodInfo.url}" alt="bleh" class="m-scroll w-[11.1656%] h-auto" />
+      {/each}
     </div>
 
     <img
@@ -173,16 +128,19 @@
 </div>
 
 <style>
-  .m-scroll > img {
-    animation: scroll 5s linear infinite;
+  .m-scroll {
+    animation: scroll 10s linear infinite;
+    position: absolute;
+    left: 100%;
+    top: 0;
   }
 
   @keyframes scroll {
     from {
-      transform: translateX(0%);
+      transform: translateX(0);
     }
     to {
-      transform: translateX(-100%);
+      transform: translateX(calc(-100dvw - 100%));
     }
   }
 </style>
