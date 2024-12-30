@@ -43,8 +43,6 @@
   });
 </script>
 
-<div class="h-8 w-full bg-[#754f4f]"></div>
-
 <div class="relative w-full h-full max-w-[100vw]">
   <img
     alt="background with ledge"
@@ -59,9 +57,16 @@
       class="relative w-full h-auto top-[49.3902%] z-30"
     />
 
-    <div class="scroll absolute top-[5.8%] z-50 overflow-hidden h-full" style=" width: 100%; max-width: 100dvw;">
+    <div
+      class="scroll absolute top-[5.8%] z-50 overflow-hidden h-full"
+      style=" width: 100%; max-width: 100dvw;"
+    >
       {#each shownImages as foodInfo (foodInfo.imgId)}
-        <img src="/conveyor-belt/{foodInfo.url}" alt="bleh" class="m-scroll w-[11.1656%] h-auto" />
+        <img
+          src="/conveyor-belt/{foodInfo.url}"
+          alt="bleh"
+          class="m-scroll w-[11.1656%] h-auto"
+        />
       {/each}
     </div>
 
