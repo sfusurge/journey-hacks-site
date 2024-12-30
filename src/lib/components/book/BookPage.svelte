@@ -136,6 +136,7 @@
         background-size: 800% 100%;
         background-position-x: calc(-1 * var(--idx) * 100%);
         backface-visibility: hidden;
+
     }
 
     .pageSegment::after {
@@ -150,8 +151,9 @@
         background-size: 800% 100%;
         background-position-x: calc(-1 * (7 - var(--idx)) * 100%);
         transform-origin: center;
-        transform: rotateY(180deg) scaleX(1.012);
+        transform: rotateY(180deg) scaleX(1.02);
         backface-visibility: hidden;
+
     }
 
     .flip > .pageSide * {
