@@ -1,4 +1,6 @@
 <script lang="ts">
+    import ConveyorItem from "./ConveyorItem.svelte";
+
   const imageUrls = [
     // TODO switch to .svg later.
     "food-0.webp",
@@ -64,7 +66,7 @@
       style=" width: 100%; max-width: 100dvw;"
     >
       {#each shownImages as foodInfo (foodInfo.imgId)}
-        <img src="/conveyor-belt/{foodInfo.url}" alt="bleh" class="m-scroll w-[11.1656%] h-auto" />
+        <ConveyorItem url={`/conveyor-belt/${foodInfo.url}`} id={foodInfo.imgId}></ConveyorItem>
       {/each}
     </div>
 
@@ -131,19 +133,5 @@
 </div>
 
 <style>
-  .m-scroll {
-    animation: scroll 10s linear infinite;
-    position: absolute;
-    left: 100%;
-    top: 0;
-  }
 
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100dvw - 100%));
-    }
-  }
 </style>
