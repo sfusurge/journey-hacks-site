@@ -12,6 +12,9 @@
     "food-6.webp",
     "food-7.webp",
     "food-8.webp",
+    "food-9.webp",
+    "food-10.webp",
+
   ];
 
   let shownImages: { url: string; imgId: number }[] = $state([]);
@@ -133,5 +136,7 @@
 </div>
 
 <style>
-
+  img{
+    animation-direction: reverse;
+  }
 </style>
