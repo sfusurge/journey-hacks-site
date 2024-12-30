@@ -6,6 +6,7 @@
   import Faq from "$lib/components/MainPageParts/faq.svelte";
   import InfoBook from "$lib/components/MainPageParts/InfoBook.svelte";
   import Footer from "$lib/components/Footer.svelte";
+  import ConveyorBelt from "$lib/components/MainPageParts/conveyorBelt.svelte";
 </script>
 
 <Home />
@@ -13,4 +14,5 @@
 <About />
 <Faq />
 <InfoBook />
+<ConveyorBelt />
 <Footer />
