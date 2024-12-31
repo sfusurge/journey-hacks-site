@@ -43,7 +43,9 @@
   });
 </script>
 
-<div class="relative w-full h-full max-w-[100vw]">
+<div
+  class="relative w-full h-full max-w-[100vw] -mt-[1px] pointer-events-none select-none"
+>
   <img
     alt="background with ledge"
     src="/conveyor-belt/background-with-ledge.png"
