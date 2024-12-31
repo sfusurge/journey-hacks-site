@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { getAllContexts } from "svelte";
-
   const links = [
     ["About", "#"],
     ["FAQ", "#"],
@@ -10,7 +8,7 @@
 
   let defaultNav: string = "bg-[#c4d086] top-0 max-w-[100vw]";
   let dockedNav: string =
-    "bg-[#57392E] max-w-[1200px] md:top-6 md:rounded-lg dockedNav";
+    "bg-[#57392E] lg:max-w-[1024px] top-0 lg:top-6 lg:rounded-lg dockedNav";
 
   let scrollY = $state(0);
   $inspect(scrollY);
@@ -19,12 +17,13 @@
 <svelte:window bind:scrollY />
 
 <nav
+  id="desktop-nav"
   class={`flex fixed inset-x-0 mx-auto p-4 z-[999] items-center w-full justify-between ${scrollY <= 720 ? defaultNav : dockedNav}`}
 >
   <div class="flex gap-6 items-center text-lg font-medium">
     <a
       href="#"
-      class={`${scrollY <= 720 ? "bg-[#57392E] hover:bg-[#57392E] text-white" : "bg-[#c4d086] text-[#57392E]"} block  w-fit px-4 py-2 rounded-md`}
+      class={`${scrollY <= 720 ? "bg-[#57392E] hover:bg-[#231813] hover:text-[#CE9788] transition text-white" : "bg-[#c4d086] hover:bg-[#d0d99e] transition text-[#57392E]"} block h-[2.75rem] w-fit px-4 py-2 rounded-md`}
       >Apply</a
     >
 
@@ -33,10 +32,9 @@
         <a
           href={url}
           class={`${
-            scrollY <= 720
-              ? "hover:underline text-[#57392E] decoration-[1.5px] decoration-wavy no-underline"
-              : "text-white"
-          }`}>{name}</a
+            scrollY <= 720 ? "text-[#57392E] " : "text-white"
+          } hover:underline decoration-[1.5px] decoration-wavy no-underline`}
+          >{name}</a
         >
       {/each}
     </div>
@@ -50,7 +48,7 @@
     <svg
       width="30"
       height="31"
-      class="h-8 mx-auto"
+      class="h-8 mx-auto hover:scale-125 transition"
       viewBox="0 0 30 31"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
