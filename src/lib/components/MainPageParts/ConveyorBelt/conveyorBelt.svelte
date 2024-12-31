@@ -1,5 +1,5 @@
 <script lang="ts">
-    import ConveyorItem from "./ConveyorItem.svelte";
+  import ConveyorItem from "./ConveyorItem.svelte";
 
   const imageUrls = [
     // TODO switch to .svg later.
@@ -14,7 +14,6 @@
     "food-8.webp",
     "food-9.webp",
     "food-10.webp",
-
   ];
 
   let shownImages: { url: string; imgId: number }[] = $state([]);
@@ -48,9 +47,9 @@
   });
 </script>
 
-<div class="h-8 w-full bg-[#754f4f]"></div>
-
-<div class="relative w-full h-full max-w-[100vw]">
+<div
+  class="relative w-full h-full max-w-[100vw] -mt-[1px] pointer-events-none select-none"
+>
   <img
     alt="background with ledge"
     src="/conveyor-belt/background-with-ledge.webp"
@@ -69,7 +68,8 @@
       style=" width: 100%; max-width: 100dvw;"
     >
       {#each shownImages as foodInfo (foodInfo.imgId)}
-        <ConveyorItem url={`/conveyor-belt/${foodInfo.url}`} id={foodInfo.imgId}></ConveyorItem>
+        <ConveyorItem url={`/conveyor-belt/${foodInfo.url}`} id={foodInfo.imgId}
+        ></ConveyorItem>
       {/each}
     </div>
 
@@ -136,7 +136,7 @@
 </div>
 
 <style>
-  img{
+  img {
     animation-direction: reverse;
   }
 </style>
