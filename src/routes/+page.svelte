@@ -8,8 +8,10 @@
   import Footer from "$lib/components/Footer.svelte";
   import ConveyorBelt from "$lib/components/MainPageParts/ConveyorBelt/conveyorBelt.svelte";
   import Counter from "$lib/components/MainPageParts/counter.svelte";
+  import Nav from "$lib/components/Nav.svelte";
 </script>
 
+<Nav />
 <Home />
 <Apply />
 <About />
