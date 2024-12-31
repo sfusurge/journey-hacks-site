@@ -37,7 +37,7 @@
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
-        class={`w-8 h-8  mx-auto hover:scale-125 transition ${scrollY <= 720 ? "text-[#57392E]" : "text-white"}`}
+        class={`w-7 h-7 mx-auto hover:scale-125 transition ${scrollY <= 720 ? "text-[#57392E]" : "text-white"}`}
       >
         {#if !isOpen}
           <path

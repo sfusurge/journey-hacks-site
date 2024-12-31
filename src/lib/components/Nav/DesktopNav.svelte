@@ -48,7 +48,7 @@
     <svg
       width="30"
       height="31"
-      class="h-8 mx-auto hover:scale-125 transition"
+      class="h-7 mx-auto hover:scale-125 transition"
       viewBox="0 0 30 31"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
