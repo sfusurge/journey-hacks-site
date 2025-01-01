@@ -19,7 +19,7 @@
     }
   
     .overlay {
-      background-image: url("../assets/bg.png");
+      background-image: url("bg.svg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -52,32 +52,43 @@
       font-size: 80px;
       color: #664848;
     }
-  
-    @media (max-width: 800px) {
-      .title {
-        position: absolute;
-        top: 20px;
-        left: 35%;
-        transform: translateX(-50%);
-        text-align: center;
-        margin-top: 20px;
-        margin-right: 0;
-        margin-left: 0;
-        width: auto;
-        line-height: 0.8;
-      }
-  
-      .big-text {
-        font-size: 60px;
-      }
-      
-      .year {
-        position: absolute;
-        left: 140%;
-      }
+
+    .navbar-space {
+      padding-top: 80px;
+      background-color: rgb(188,201,132);
     }
-  </style>
   
+    @media (max-width: 900px) {
+    .background {
+      align-items: center;
+    }
+
+    .title {
+      position: static;
+      transform: none;
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 0.9;
+    }
+
+    .big-text {
+      font-size: 60px;
+    }
+    
+    .year {
+      position: static;
+      align-self: flex-end;
+      margin-top: 10px;
+      margin-right: 50px;
+    }
+  }
+
+  </style>
+  <div class="navbar-space"></div>
   <div class="background">
     <div class="overlay"></div>
   
