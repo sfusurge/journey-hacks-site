@@ -50,12 +50,14 @@
   transform: translate(-50%, -50%);
   z-index: 3;
   text-align: center;
-  width: 100%;
+  width: 90dvw;
+  min-width: 400px;
+  max-width: 900px;
 }
 
 .center-image {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
   position: relative;
 }
@@ -135,23 +137,6 @@
   .bowl {
     bottom: 20px;
     right: 20px;
-  }
-
-  .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    text-align: center;
-    width: auto;
-  }
-
-  .center-image {
-    display: block;
-    width: auto;
-    height: auto;
-    position: relative;
   }
 }
 
