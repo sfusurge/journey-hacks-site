@@ -24,21 +24,23 @@
   <div
     class="links w-full sm:w-fit flex flex-col sm:order-2 gap-1.5 sm:flex-row sm:gap-3 sm:mx-auto sm:items-center"
   >
-    <svg
-      width="30"
-      height="31"
-      class="h-6"
-      viewBox="0 0 30 31"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M14.9695 30.9268C23.2369 30.9268 29.939 24.2247 29.939 15.9573C29.939 7.68986 23.2369 0.987793 14.9695 0.987793C6.70207 0.987793 0 7.68986 0 15.9573C0 24.2247 6.70207 30.9268 14.9695 30.9268ZM10.6408 17.0278L15.8901 3.58291L19.9408 10.4885L14.8445 14.066L17.3959 17.2498L19.9471 20.4338L11.83 26.657L14.2999 18.3678L10.6408 17.0278Z"
-        fill="#FFEBDD"
-      />
-    </svg>
+    <a href="#" aria-label="SFU Surge">
+      <svg
+        width="30"
+        height="31"
+        class="h-6 hover:scale-125 transition mb-2 sm:mb-0"
+        viewBox="0 0 30 31"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M14.9695 30.9268C23.2369 30.9268 29.939 24.2247 29.939 15.9573C29.939 7.68986 23.2369 0.987793 14.9695 0.987793C6.70207 0.987793 0 7.68986 0 15.9573C0 24.2247 6.70207 30.9268 14.9695 30.9268ZM10.6408 17.0278L15.8901 3.58291L19.9408 10.4885L14.8445 14.066L17.3959 17.2498L19.9471 20.4338L11.83 26.657L14.2999 18.3678L10.6408 17.0278Z"
+          fill="#FFEBDD"
+        />
+      </svg>
+    </a>
 
     <a href="#" class="link">Apply</a>
     <a href="#" class="link">About</a>

@@ -32,9 +32,10 @@
         <a
           href={url}
           class={`${
-            scrollY <= 720 ? "text-[#57392E] " : "text-white"
-          } hover:underline decoration-[1.5px] decoration-wavy no-underline`}
-          >{name}</a
+            scrollY <= 720
+              ? "text-[#57392E] hover:text-[#1A672B]"
+              : "text-white hover:text-[#c4d086]"
+          } font-medium no-underline`}>{name}</a
         >
       {/each}
     </div>

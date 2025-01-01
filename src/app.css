@@ -6,7 +6,7 @@
   @font-face {
     font-family: "Neue";
     font-style: normal;
-          font-weight: 400;
+    font-weight: 400;
     font-display: swap;
     src: url("/fonts/Neue.ttf") format("opentype");
   }
@@ -15,8 +15,12 @@
 .link {
   color: white;
   font-weight: 500;
-  text-decoration: underline;
+  text-decoration: none;
   display: block;
+}
+
+.link:hover {
+  color: #c4d086;
 }
 
 img {
