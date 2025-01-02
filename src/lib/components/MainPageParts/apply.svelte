@@ -34,14 +34,15 @@
 
     .corner {
         position: absolute;
-        width: 250px;
         height: auto;
         z-index: 2;
     }
 
     .butter {
-        top: 20px;
+        top: 150px;
         left: -120px;
+        width: 450px;
+
     }
 
     .sugar {
@@ -50,15 +51,15 @@
     }
 
     .pin {
-        bottom: 20px;
+        bottom: 190px;
         left: -100px;
-        width: 320px;
+        width: 520px;
     }
 
     .bowl {
-        bottom: 20px;
-        right: -100px;
-        width: 280px;
+        bottom: 60px;
+        right: -150px;
+        width: 450px;
     }
 
     .center {
@@ -96,27 +97,31 @@
         font-size: large;
         font-weight: bold;
         color: white;
+        background-color: #57392e;
         border-radius: 5px;
         border: none;
         cursor: pointer;
         transform-origin: center;
         transition:
-            transform 0.3s ease,
-            background-color 0.3s ease;
+            scale 0.3s ease-out,
+            filter 0.3s ease-out;
     }
 
     .btn:nth-child(2) {
-        background-color: #ffbe77;
         transform: rotate(15deg);
     }
 
     .btn:nth-child(1) {
-        background-color: #5562ee;
         transform: rotate(-15deg);
     }
 
     .btn:hover {
-        background-color: #aaa;
+        scale: 1.1;
+        filter: brightness(1.05);
+    }
+    .btn:active{
+        scale: 0.96;
+        filter: brightness(0.74);
     }
 
     .sugar {
@@ -138,28 +143,28 @@
         }
 
         .butter {
-            top: 20px;
-            left: 20px;
-            width: 350px;
+            top: calc(50% - 450px);
+            left: calc(50% - 650px);
+            width: 450px;
         }
 
         .sugar {
-            top: 20px;
-            right: 20px;
-            width: 250px;
+            top: 60px;
+            left: calc(50% + 350px );
+            width: 350px;
             display: block;
         }
 
         .pin {
-            bottom: 20px;
-            left: 20px;
-            width: 400px;
+            bottom: 70px;
+            left: calc(50% - 450px);
+            width: 500px;
         }
 
         .bowl {
-            bottom: 20px;
-            right: 20px;
-            width: 320px;
+            bottom: 100px;
+            left: calc(50% + 250px);
+            width: 420px;
         }
     }
 </style>

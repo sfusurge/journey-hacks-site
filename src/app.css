@@ -25,3 +25,8 @@
 img {
   user-select: none;
 }
+
+
+html{
+  scrollbar-color: #57392E #DFB19B;
+}
