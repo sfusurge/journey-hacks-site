@@ -15,6 +15,10 @@
 	<meta property="og:title" content="Journey Hacks 2025"/>	
 	<meta property="og:description" content="JOURNEY HACKS JOURNEY HACK JOURNEY HACKS"/>	
 	<meta property="og:image" content="/bg.webp"/>	
+	<meta property="og:type" content="website"/>	
+	<meta property="og:url" content="https://preview--journeyhacks.netlify.app/"/>	
+
+
 </svelte:head>
 
 {@render children()}
