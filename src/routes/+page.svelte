@@ -8,8 +8,22 @@
   import Footer from "$lib/components/Footer.svelte";
   import ConveyorBelt from "$lib/components/MainPageParts/ConveyorBelt/conveyorBelt.svelte";
   import Counter from "$lib/components/MainPageParts/counter.svelte";
+  import Nav from "$lib/components/Nav/Nav.svelte";
+
+  let scrollY = $state(0);
+  let isTop = $derived(scrollY < 300);
+  $effect(() => {
+    if (isTop) {
+      document.body.style.setProperty("background-color", "#C4D086");
+    } else {
+      document.body.style.setProperty("background-color", "#57392E");
+    }
+  });
 </script>
 
+<svelte:window bind:scrollY />
+
+<Nav></Nav>
 <Home />
 <Apply />
 <About />

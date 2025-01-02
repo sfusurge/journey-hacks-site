@@ -6,7 +6,7 @@
   @font-face {
     font-family: "Neue";
     font-style: normal;
-    font-weight: 400;
+          font-weight: 400;
     font-display: swap;
     src: url("/fonts/Neue.ttf") format("opentype");
   }
@@ -18,3 +18,11 @@
   text-decoration: underline;
   display: block;
 }
+
+img {
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+}
+
