@@ -41,7 +41,7 @@
     .butter {
         top: 150px;
         left: -120px;
-        width: 450px;
+        width: 350px;
 
     }
 
@@ -53,13 +53,13 @@
     .pin {
         bottom: 190px;
         left: -100px;
-        width: 520px;
+        width: 400px;
     }
 
     .bowl {
         bottom: 60px;
         right: -150px;
-        width: 450px;
+        width: 350px;
     }
 
     .center {
