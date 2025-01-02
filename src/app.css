@@ -8,7 +8,15 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/fonts/Neue.ttf") format("opentype");
+    src: url("/fonts/neue_medium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Coiny";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/coiny.woff2") format("woff2");
   }
 }
 

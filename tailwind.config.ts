@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Neue Haas Grotesk Display Pro", ...defaultTheme.fontFamily.sans]
+        sans: ["Neue", ...defaultTheme.fontFamily.sans]
       }
     }
   },

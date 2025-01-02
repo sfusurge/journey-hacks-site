@@ -11,7 +11,7 @@
 
 
 <svelte:head>
-    <link rel="prefetch" href="/bg.svg" as="image" fetchpriority="high" >
+    <link rel="preload" href="/bg.webp" as="image" fetchpriority="high" >
 </svelte:head>
 
 <style>
@@ -35,7 +35,7 @@
     }
 
     .overlay {
-        background-image: url("/bg.svg");
+        background-image: url("/bg.webp");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

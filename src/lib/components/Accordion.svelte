@@ -12,7 +12,7 @@
 
 <div class="accordion">
     <button
-        class="button flex flex-row content-between w-full font-bold tracking-wide"
+        class="button flex flex-row content-between w-full text-lg font-large tracking-wide"
         onclick={() => (isOpen = !isOpen)}
     >
         <div class="w-full text-left">{question}</div>
@@ -35,7 +35,7 @@
         class="answer-container"
         style="height:{innerHeight}px; max-height: {isOpen ? innerHeight : 0}px;"
     >
-        <div class="answer" bind:clientHeight={innerHeight}>
+        <div class="answer text-base" bind:clientHeight={innerHeight}>
             {answer}
         </div>
     </div>

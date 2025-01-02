@@ -8,7 +8,7 @@
     };
 
     let FaqObjects: FAQ[] = [
-        { question: "What is this event about?", answer: "This is an answer 0" },
+        { question: "What is this event about?", answer: "This is an answer 0, long long, long, long ,long long, long, long ,long ,ong anwser" },
         { question: "This is a question 1", answer: "This is an answer 1" },
         { question: "This is a question 2", answer: "This is an answer 2" },
         { question: "This is a question 3", answer: "This is an answer 3" },

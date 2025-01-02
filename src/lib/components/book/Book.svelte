@@ -15,7 +15,12 @@
         index: number;
     }
 
-    let { imgUrls, index = $bindable(0), backUrl = "", singlePageMode = false }: BookType = $props();
+    let {
+        imgUrls,
+        index = $bindable(0),
+        backUrl = "",
+        singlePageMode = false,
+    }: BookType = $props();
 
     let pages: Page[] = $derived.by(() => {
         if (singlePageMode) {
@@ -135,9 +140,11 @@
         <link rel="preload" href={imgUrls[0]} as="image" fetchpriority="high" />
     {/if}
 
-    {#each imgUrls as img}
-        <link rel="prefetch" href={img} as="image" fetchpriority="low" />
-    {/each}
+    <link rel="preload" href={pages[index].backPage} as="image" fetchpriority="low" />
+
+    {#if index + 1 < pages.length}
+        <link rel="preload" href={pages[index + 1].frontPage} as="image" fetchpriority="low" />
+    {/if}
 </svelte:head>
 
 <div
@@ -150,7 +157,9 @@
     <div
         class="bookInner"
         class:singlePage={singlePageMode}
-        style="scale:{singlePageMode ? 1 : perspectiveScaleRatio}; transform: perspective(2000px) rotateX({angle}deg);"
+        style="scale:{singlePageMode
+            ? 1
+            : perspectiveScaleRatio}; transform: perspective(2000px) rotateX({angle}deg);"
         bind:clientHeight={innerHeight}
     >
         <BookPage
