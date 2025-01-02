@@ -6,7 +6,7 @@
 }
 
 .background {
-  background-image: url("../assets/bg-apply.png");
+  background-image: url("bg-apply.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@
 
 .butter {
   top: 20px;
-  left: -100px;
+  left: -120px;
 }
 
 .sugar {
@@ -35,12 +35,14 @@
 
 .pin {
   bottom: 20px;
-  left: -50px;
+  left: -100px;
+  width: 320px;
 }
 
 .bowl {
   bottom: 20px;
-  right: -80px; 
+  right: -100px; 
+  width: 280px;
 }
 
 .center {
@@ -103,6 +105,7 @@
   display: none;
 }
 
+
 @media (min-width: 800px) {
   .corner {
     width: 300px;
@@ -120,6 +123,7 @@
   .butter {
     top: 20px;
     left: 20px;
+    width: 350px;
   }
 
   .sugar {
@@ -132,23 +136,25 @@
   .pin {
     bottom: 20px;
     left: 20px;
+    width: 400px;
   }
 
   .bowl {
     bottom: 20px;
     right: 20px;
+    width: 320px;
   }
 }
 
   </style>
   
   <div class="background">
-    <img src="butter.png" class="corner butter" alt="Butter" />
-    <img src="pin.png" class="corner pin" alt="Pin" />
-    <img src="bowl.png" class="corner bowl" alt="Bowl" />
-    <img src="sugar.png" class="corner sugar" alt="Sugar" />
+    <img src="butter.svg" class="corner butter" alt="Butter" />
+    <img src="pin.svg" class="corner pin" alt="Pin" />
+    <img src="bowl.svg" class="corner bowl" alt="Bowl" />
+    <img src="sugar.svg" class="corner sugar" alt="Sugar" />
     <div class="center">
-      <img src="center.png" class="center-image" alt="Center" />
+      <img src="center.svg" class="center-image" alt="Center" />
       <div class="buttons">
         <button class="btn">Hacker</button>
         <button class="btn">Mentor</button>
