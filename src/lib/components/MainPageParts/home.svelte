@@ -10,9 +10,6 @@
 </div>
 
 
-<svelte:head>
-    <link rel="preload" href="/bg.webp" as="image" fetchpriority="high" >
-</svelte:head>
 
 <style>
     * {
