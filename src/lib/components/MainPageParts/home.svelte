@@ -9,6 +9,11 @@
     </div>
 </div>
 
+
+<svelte:head>
+    <link rel="prefetch" href="/bg.svg" as="image" fetchpriority="high" >
+</svelte:head>
+
 <style>
     * {
         margin: 0;
