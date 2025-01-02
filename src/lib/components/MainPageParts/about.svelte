@@ -1,7 +1,7 @@
 <div class="background">
   <div class="content-container">
     <div class="header-container">
-      <img src="header.png" alt="Header" class="header-image" />
+      <img src="header.svg" alt="Header" class="header-image" />
       <div class="header-text">About</div>
     </div>
 
@@ -35,7 +35,7 @@
       </div>
     </div>
   </div>
-  <img src="bg-about.png" alt="About Background" class="mobile-image" />
+  <img src="bg-about.svg" alt="About Background" class="mobile-image" />
 </div>
 
 <style>
@@ -46,7 +46,7 @@
   }
 
   .background {
-    background-image: url("../assets/bg-about.png");
+    background-image: url("bg-about.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -61,11 +61,12 @@
     right: 50px;
     transform: translateY(-50%);
     width: 350px;
-    background-color: #8f6455;
+    background-color: rgba(87, 57, 46, 1);
     color: #ffebdd;
     border-radius: 15px;
-    padding: 20px;
+    padding: 25px;
     font-family: Arial, sans-serif;
+    
   }
 
   .header-container {
@@ -74,6 +75,7 @@
     height: 120px;
     border-radius: 15px 15px 0 0;
     overflow: hidden;
+    
   }
 
   .header-image {
@@ -88,7 +90,7 @@
     left: 40%;
     transform: translate(-50%, -50%) rotate(-10deg);
     color: #835242;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     z-index: 2;
     font-family: "Coiny", sans-serif;
@@ -129,6 +131,8 @@
       transform: none;
       border-radius: 0;
       padding: 20px;
+      background-color: #8f6455;
+      padding-bottom: 75px;
     }
 
     .header-container {
@@ -142,7 +146,7 @@
     }
 
     .header-image {
-      width: 60%;
+      width: 300px;
       height: 100%;
       object-fit: cover;
     }
@@ -150,16 +154,16 @@
     .header-text {
       position: absolute;
       top: 50%;
-      left: 30%;
-      transform: translate(-50%, -50%) rotate(-10deg);
+      left: 150px;
       color: #835242;
-      font-size: 30px;
+      font-size: 40px;
       font-weight: bold;
       z-index: 2;
     }
 
     .mobile-special {
       margin-left: 20px;
+      margin-top: 75px;
     }
   }
 </style>

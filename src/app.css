@@ -18,18 +18,7 @@
   text-decoration: none;
   display: block;
 }
-
 .link:hover {
   color: #c4d086;
 }
 
-img {
-  user-select: none;
-  user-drag: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
-}
-
-body {
-  background-color: #c4d086;
-}

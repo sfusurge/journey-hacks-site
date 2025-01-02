@@ -7,7 +7,7 @@
     let screenWidth = $state(0);
 </script>
 
-<div class="bookContainer" bind:clientWidth={screenWidth}>
+<div id="our_team" class="bookContainer" bind:clientWidth={screenWidth}>
     <div class="bookHolder">
         <div class="labelContainer"><StickyLabel>THE CHEFS</StickyLabel></div>
         <Book backUrl={backPageUrl} {imgUrls} singlePageMode={screenWidth < 1000}></Book>

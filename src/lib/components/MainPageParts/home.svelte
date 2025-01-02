@@ -1,90 +1,98 @@
-<div class="background mt-[4.75rem]">
-  <div class="overlay"></div>
+<div class="navbar-space"></div>
+<div class="background" id="">
+    <div class="overlay"></div>
 
-  <div class="title">
-    <p class="big-text">JOURNEY HACKS</p>
-    <p class="year">2025</p>
-  </div>
+    <div class="title">
+        <h1 class="title1">JOURNEY</h1>
+        <h1 class="title2">HACKS</h1>
+        <span class="year">2025</span>
+    </div>
 </div>
 
 <style>
-  .title,
-  .big-text,
-  .year {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .background {
-    background-color: #8f6455;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 20px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .overlay {
-    background-image: url("../assets/bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-  }
-
-  .title {
-    max-width: 300px;
-    text-align: right;
-    margin-top: 40px;
-    position: relative;
-    right: 10%;
-    z-index: 2;
-    font-family: "Coiny", sans-serif;
-    line-height: 1.3;
-  }
-
-  .year {
-    text-align: right;
-    color: #664848;
-    font-family: "Coiny", sans-serif;
-  }
-
-  .big-text {
-    font-size: 80px;
-    color: #664848;
-  }
-
-  @media (max-width: 800px) {
-    .title {
-      position: absolute;
-      top: 20px;
-      left: 35%;
-      transform: translateX(-50%);
-      text-align: center;
-      margin-top: 20px;
-      margin-right: 0;
-      margin-left: 0;
-      width: auto;
-      line-height: 0.8;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    .big-text {
-      font-size: 60px;
+    .background {
+        background-color: #8f6455;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .overlay {
+        background-image: url("bg.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .navbar-space {
+        padding-top: 80px;
+        background-color: rgb(188, 201, 132);
+    }
+
+    .title {
+        position: absolute;
+        right: 5rem;
+        top: 2rem;
+        width: fit-content;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .title1,
+    .title2,
+    .year {
+        font-family: "Coiny";
+        color: #57392e;
+        line-height: 100%;
+    }
+
+    .title1 {
+        font-size: 90px;
+    }
+    .title2 {
+        font-size: 125px;
     }
 
     .year {
-      position: absolute;
-      left: 140%;
+        font-size: 50px;
     }
-  }
+
+    @media (max-width: 900px) {
+/* for small screen size */
+        .title {
+            right:2rem;
+            top: 1rem;
+        }
+
+        .title1{
+            font-size: 60px;
+        }
+
+        .title2{
+            font-size: 80px;
+        }
+
+        .year{
+            font-size: 30px;
+        }
+    }
 </style>

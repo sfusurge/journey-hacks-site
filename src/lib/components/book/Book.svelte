@@ -15,12 +15,7 @@
         index: number;
     }
 
-    let {
-        imgUrls,
-        index = $bindable(0),
-        backUrl = "",
-        singlePageMode = false,
-    }: BookType = $props();
+    let { imgUrls, index = $bindable(0), backUrl = "", singlePageMode = false }: BookType = $props();
 
     let pages: Page[] = $derived.by(() => {
         if (singlePageMode) {
@@ -155,9 +150,7 @@
     <div
         class="bookInner"
         class:singlePage={singlePageMode}
-        style="scale:{singlePageMode
-            ? 1
-            : perspectiveScaleRatio}; transform: perspective(2000px) rotateX({angle}deg);"
+        style="scale:{singlePageMode ? 1 : perspectiveScaleRatio}; transform: perspective(2000px) rotateX({angle}deg);"
         bind:clientHeight={innerHeight}
     >
         <BookPage
@@ -268,6 +261,11 @@
         height: calc(100% + var(--coverMargin) * 2);
 
         border-radius: 5px;
+
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        /* forces antialiasing for 3d transform for some reason */
+        outline: 1px solid transparent;
     }
 
     /* ::after is to add thickness to cover */
@@ -275,6 +273,10 @@
         background-color: #51362d;
         z-index: -2;
         transform: translate3d(0, 10px, -10px);
+
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        outline: 1px solid transparent;
     }
 
     .next::before,
