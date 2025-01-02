@@ -54,6 +54,7 @@
     img {
         mask-composite: subtract;
         mask-type: alpha;
+        pointer-events: none;
     }
 
     .imgHolder {

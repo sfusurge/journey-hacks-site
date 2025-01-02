@@ -1,4 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="3840" height="2588">
-<path d="M0 0 C1267.2 0 2534.4 0 3840 0 C3840 854.04 3840 1708.08 3840 2588 C2572.8 2588 1305.6 2588 0 2588 C0 1733.96 0 879.92 0 0 Z " fill="#8F6455" transform="translate(0,0)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2588"><path fill="#8F6455" d="M0 0h3840v2588H0z"/></svg>

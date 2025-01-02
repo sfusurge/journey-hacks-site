@@ -21,7 +21,7 @@
 
   const maxCount = 10;
   function addImages() {
-    if (Math.random() < 0.2) {
+    if (Math.random() < 0.6) {
       return;
     }
 
@@ -43,7 +43,7 @@
     /**
      * in react you would do useEffect(()=>{...}, []); (empty dependency array means only run once onMount)
      */
-    setInterval(addImages, 2000);
+    setInterval(addImages, 1100);
   });
 </script>
 
