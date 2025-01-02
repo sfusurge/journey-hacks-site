@@ -137,13 +137,13 @@
 
 <svelte:head>
     {#if imgUrls.length > 0}
-        <link rel="preload" href={imgUrls[0]} as="image" fetchpriority="high" />
+        <link rel="prefetch" href={imgUrls[0]} as="image" fetchpriority="low" />
     {/if}
 
-    <link rel="preload" href={pages[index].backPage} as="image" fetchpriority="low" />
+    <link rel="prefetch" href={pages[index].backPage} as="image" fetchpriority="low" />
 
     {#if index + 1 < pages.length}
-        <link rel="preload" href={pages[index + 1].frontPage} as="image" fetchpriority="low" />
+        <link rel="prefetch" href={pages[index + 1].frontPage} as="image" fetchpriority="low" />
     {/if}
 </svelte:head>
 
