@@ -22,3 +22,6 @@
   color: #c4d086;
 }
 
+img {
+  user-select: none;
+}
