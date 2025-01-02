@@ -22,12 +22,14 @@
 
         <div class="flex gap-6 -ml-1">
             {#each links as [name, url]}
-                <a
-                    href={url}
-                    class={`${
-                        scrollY <= 720 ? "text-[#57392E] " : "text-white"
-                    } hover:underline decoration-[1.5px] decoration-wavy no-underline`}>{name}</a
-                >
+            <a
+            href={url}
+            class={`${
+              scrollY <= 720
+                ? "text-[#57392E] hover:text-[#1A672B]"
+                : "text-white hover:text-[#c4d086]"
+            } font-medium no-underline`}>{name}</a
+          >
             {/each}
         </div>
     </div>
