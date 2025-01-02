@@ -22,7 +22,7 @@
     }
 
     .background {
-        background-image: url("bg-apply.svg");
+        background-image: url("/bg-apply.svg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

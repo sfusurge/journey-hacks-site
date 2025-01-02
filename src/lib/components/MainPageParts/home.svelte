@@ -30,7 +30,7 @@
     }
 
     .overlay {
-        background-image: url("bg.svg");
+        background-image: url("/bg.svg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

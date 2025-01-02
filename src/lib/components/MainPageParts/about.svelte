@@ -1,9 +1,10 @@
+<script lang="ts">
+    import StickyLabel from "../StickyLabel.svelte";
+
+</script>
 <div class="background">
   <div class="content-container">
-    <div class="header-container">
-      <img src="header.svg" alt="Header" class="header-image" />
-      <div class="header-text">About</div>
-    </div>
+    <StickyLabel>About</StickyLabel>
 
     <div class="section mobile-special">
       <div class="section-text">
@@ -35,7 +36,7 @@
       </div>
     </div>
   </div>
-  <img src="bg-about.svg" alt="About Background" class="mobile-image" />
+  <img src="/bg-about.svg" alt="About Background" />
 </div>
 
 <style>
@@ -46,10 +47,6 @@
   }
 
   .background {
-    background-image: url("bg-about.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -79,8 +76,8 @@
   }
 
   .header-image {
-    width: 80%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
   }
 
@@ -115,14 +112,24 @@
     margin-left: 20px;
   }
 
-  .mobile-image {
-    display: none;
+  img {
+    height: 100%;
+    width: auto;
+    max-width: unset;
   }
 
+
   @media screen and (max-width: 900px) {
-    .background {
-      background-image: none;
-      height: auto;
+
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .background{
+        height: fit-content;
     }
 
     .content-container {
@@ -139,17 +146,6 @@
       border-radius: 0;
     }
 
-    .mobile-image {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .header-image {
-      width: 300px;
-      height: 100%;
-      object-fit: cover;
-    }
 
     .header-text {
       position: absolute;
