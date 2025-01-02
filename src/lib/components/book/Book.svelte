@@ -136,10 +136,7 @@
 </script>
 
 <svelte:head>
-    {#if imgUrls.length > 0}
-        <link rel="prefetch" href={imgUrls[0]} as="image" fetchpriority="low" />
-    {/if}
-
+    
     <link rel="prefetch" href={pages[index].backPage} as="image" fetchpriority="low" />
 
     {#if index + 1 < pages.length}
@@ -207,10 +204,10 @@
 
     .bookInner.singlePage {
         position: absolute;
-        width: calc(200% - 2rem);
+        width: calc(200% );
         height: auto;
         top: 0;
-        right: -0.5rem;
+        right: 0;
     }
 
     .bookRoot {

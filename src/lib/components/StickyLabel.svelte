@@ -28,7 +28,8 @@
 
     @media only screen and (max-width: 1200px) {
         .labelContainer {
-            font-size: 35px;
+            font-size: 30px;
+            padding: 2rem;
         }
     }
 </style>

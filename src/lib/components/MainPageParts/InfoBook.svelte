@@ -25,6 +25,12 @@
         background-color: #dfb19b;
     }
 
+    @media (max-width: 600px) {
+        .bookContainer{
+            padding: 1rem;
+        }
+    }
+
     .bookHolder {
         max-width: 1800px;
 
