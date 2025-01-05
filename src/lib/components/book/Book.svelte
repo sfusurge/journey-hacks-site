@@ -2,6 +2,7 @@
     import { untrack } from "svelte";
     import BookPage from "./BookPage.svelte";
 
+    
     interface BookType {
         imgUrls: string[];
         index?: number;
@@ -15,12 +16,7 @@
         index: number;
     }
 
-    let {
-        imgUrls,
-        index = $bindable(0),
-        backUrl = "",
-        singlePageMode = false,
-    }: BookType = $props();
+    let { imgUrls, index = $bindable(0), backUrl = "", singlePageMode = false }: BookType = $props();
 
     let pages: Page[] = $derived.by(() => {
         if (singlePageMode) {
@@ -136,7 +132,6 @@
 </script>
 
 <svelte:head>
-    
     <link rel="prefetch" href={pages[index].backPage} as="image" fetchpriority="low" />
 
     {#if index + 1 < pages.length}
@@ -154,20 +149,20 @@
     <div
         class="bookInner"
         class:singlePage={singlePageMode}
-        style="scale:{singlePageMode
-            ? 1
-            : perspectiveScaleRatio}; transform: perspective(2000px) rotateX({angle}deg);"
+        style="scale:{singlePageMode ? 1 : perspectiveScaleRatio}; transform: perspective(2000px) rotateX({angle}deg);"
         bind:clientHeight={innerHeight}
     >
+
         <BookPage
             frontUrl={transitionPage ? transitionPage.frontPage : ""}
             backUrl={transitionPage ? (transitionPage.backPage ?? backUrl) : ""}
             {index}
             animationTime={transitionTime}
             {singlePageMode}
-        ></BookPage>
+        ></BookPage> 
 
         <div
+   
             class="page prev"
             onclick={prevPage}
             onkeydown={(e) => {
@@ -177,9 +172,10 @@
             tabindex="0"
             class:singlePage={singlePageMode}
         >
-            <img class:noUrl={prevUrl === undefined} src={prevUrl ?? backUrl} alt="" />
+            <img  class:noUrl={prevUrl === undefined} src={prevUrl ?? backUrl} alt="" />
         </div>
         <div
+     
             class="page next"
             onclick={nextPage}
             onkeydown={(e) => {
@@ -204,7 +200,7 @@
 
     .bookInner.singlePage {
         position: absolute;
-        width: calc(200% );
+        width: 200%;
         height: auto;
         top: 0;
         right: 0;

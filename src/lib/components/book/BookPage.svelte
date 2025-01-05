@@ -111,7 +111,6 @@
 
     .pageSegment {
         height: 100%;
-
         width: 100%;
 
         position: absolute;
@@ -120,29 +119,32 @@
 
         transform-style: preserve-3d;
         transform-origin: left;
+
+        outline: 1px solid transparent;
+
     }
 
     .pageSegment::before {
         content: "";
 
         position: absolute;
-        width: 100%;
+        width:round(up, 100%, 2px);
         height: 100%;
         top: 0;
         left: 0;
 
-        transform: scaleX(1.02);
         background-image: var(--frontUrl);
         background-size: 800% 100%;
         background-position-x: calc(-1 * var(--idx) * 100%);
         backface-visibility: hidden;
+
 
     }
 
     .pageSegment::after {
         content: "";
         position: absolute;
-        width: 100%;
+        width: round(up, 100%, 2px);
         height: 100%;
         top: 0;
         left: 0;
@@ -151,8 +153,9 @@
         background-size: 800% 100%;
         background-position-x: calc(-1 * (7 - var(--idx)) * 100%);
         transform-origin: center;
-        transform: rotateY(180deg) scaleX(1.02);
+        transform: rotateY(180deg);
         backface-visibility: hidden;
+ 
 
     }
 
