@@ -34,12 +34,11 @@ img {
   user-select: none;
 }
 
-body{
+body {
   position: relative;
   overflow-x: hidden;
 }
 
-
-html{
-  scrollbar-color: #57392E #DFB19B;
+html {
+  scrollbar-color: #57392e #dfb19b;
 }
