@@ -62,7 +62,7 @@
 <style>
 /* fish */
 .fish {
-    animation: fish 3s linear infinite reverse both;
+    animation: fish 2s linear infinite reverse both;
 }
 
 @keyframes fish {
@@ -89,7 +89,7 @@
 
 /* sparky pan in hand */
 .sparky-pan-hand {
-    animation: sparky-pan-hand 1.5s linear infinite alternate-reverse both;
+    animation: sparky-pan-hand 1s linear infinite alternate-reverse both;
   }
 
   @keyframes sparky-pan-hand {
@@ -105,7 +105,7 @@
 
   /* sparky wobbling animation */
   .sparky-wobble {
-    animation: sparky-wobble 3s linear infinite alternate-reverse both;
+    animation: sparky-wobble 2s linear infinite alternate-reverse both;
   }
 
   @keyframes sparky-wobble {
@@ -115,13 +115,13 @@
       transform-origin: 50% 50%;
     }
     50% {
-      transform: translateX(15px) rotate(5deg);
+      transform: translateX(15px) rotate(7deg);
     }
   }
 
   /* stormy wobbling animation */
   .stormy-wobble {
-    animation: stormy-wobble 3s linear infinite alternate-reverse both;
+    animation: stormy-wobble 2s linear infinite alternate-reverse both;
   }
 
   @keyframes stormy-wobble {
@@ -131,13 +131,13 @@
       transform-origin: 50% 50%;
     }
     50% {
-      transform: translateX(-15px) rotate(-5deg);
+      transform: translateX(-15px) rotate(-7deg);
     }
   }
 
   /* stormy's hand waving animation */
   .stormy-hand {
-    animation: stormy-hand 1.5s linear infinite alternate-reverse both;
+    animation: stormy-hand 1s linear infinite alternate-reverse both;
   }
 
   @keyframes stormy-hand {
@@ -146,14 +146,14 @@
       transform: rotate(0);
     }
     100% {
-      -webkit-transform: rotate(9deg);
-      transform: rotate(9deg);
+      -webkit-transform: rotate(7deg);
+      transform: rotate(7deg);
     }
   }
 
   /* sparky's hand waving animation */
   .sparky-hand {
-    animation: sparky-hand 1.5s linear infinite alternate-reverse both;
+    animation: sparky-hand 1s linear infinite alternate-reverse both;
   }
 
   @keyframes sparky-hand {
@@ -162,8 +162,8 @@
       transform: rotate(0);
     }
     100% {
-      -webkit-transform: rotate(-9deg);
-      transform: rotate(-9deg);
+      -webkit-transform: rotate(-7deg);
+      transform: rotate(-7deg);
     }
   }
 </style>
