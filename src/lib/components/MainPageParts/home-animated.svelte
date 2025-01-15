@@ -1,67 +1,169 @@
 <div class="">
-    <div class="relative bg-[#8F6455]">
-        <img src="/home-animated/background.png" alt="background" class="w-full h-auto">
-        <img src="/home-animated/foreground.png" alt="foreground" class="w-full h-auto absolute bottom-0 z-50">
-        
-        <div class="origin-[30.09259%_100%] stormy-wobble absolute left-[27.39583%] top-[33.1625%] z-20 w-[23.8640625%] h-auto">
-          <img src="/home-animated/stormy_head_body.png" alt="stormy" class="absolute w-[75.2962744713%] h-auto z-20">
-          <img src="/home-animated/stormy_hand_wave.png" alt="stormy's hand" class="stormy-hand absolute w-[50.020733%] mt-[18.18%] h-auto left-[49.9792662433%] z-10 origin-[27.488110%_66.881468%]">
-         </div>
-        
-        <img src="/home-animated/sparky_hand_wave.png" alt="sparky's hand" class="absolute w-[11.937%] h-auto top-[39.9707%] left-[48.802083%] z-30">
-        <img src="/home-animated/sparky_head_body.png" alt="sparky" class="absolute w-[15.090625%] h-auto top-[22.34407%] left-[54.479167%] z-40">
+  <div class="relative bg-[#8F6455]">
+    <img
+      src="/home-animated/background.png"
+      alt="background"
+      class="w-full h-auto"
+    />
+    <img
+      src="/home-animated/foreground.png"
+      alt="foreground"
+      class="w-full h-auto absolute bottom-0 z-[50]"
+    />
 
-        <img src="/home-animated/sparky_arm_with_pan.png" alt="sparky's frying pan" class="absolute w-[22.861979%] h-auto top-[47.29136%] left-[46.71875%] z-50">
-        <img src="/home-animated/fish.png" alt="fish" class="absolute w-[8.3854167%] h-auto top-[57.61347%] left-[47.7083%] z-[60]">
+    <div
+      class="stormy-wobble absolute left-[27.39583%] top-[33.1625%] z-20 w-[23.8640625%] h-[37.4450951684%]"
+    >
+      <img
+        src="/home-animated/stormy_head_body.png"
+        alt="stormy"
+        class="absolute w-[75.2962744713%] h-auto z-20"
+      />
+      <img
+        src="/home-animated/stormy_hand_wave.png"
+        alt="stormy's hand"
+        class="stormy-hand absolute w-[50.020733%] top-[18.18%] h-auto left-[49.9792662433%] z-10 origin-bottom-left"
+      />
     </div>
+
+    <div
+      class="sparky-wobble w-[20.7677083333%] h-[47.9707174231%] absolute left-[48.80208%] top-[22.34407%]"
+    >
+      <img
+        src="/home-animated/sparky_hand_wave.png"
+        alt="sparky's hand"
+        class="sparky-hand absolute w-[57.478557456%] h-auto top-[36.7445977292%] z-30 origin-bottom-right"
+      />
+      <img
+        src="/home-animated/sparky_head_body.png"
+        alt="sparky"
+        class="absolute w-[72.6638912575%] h-auto right-0 z-40"
+      />
+    </div>
+
+    <div
+        class=" w-[22.8619791667%] h-[47.9707174231%] absolute left-[46.71875%] top-[22.34407%] z-[60]"
+      >
+        <img
+          src="/home-animated/sparky_arm_with_pan.png"
+          alt="sparky's frying pan"
+          class="sparky-pan-hand absolute w-full h-auto left-0 top-[52.00524%] origin-top-right"
+        />
+
+        <img
+          src="/home-animated/fish.png"
+          alt="fish"
+          class="fish absolute w-[36.6784371796%] left-[4.32%] top-[70.5227%] h-auto origin-center"
+        />
+      </div>
+  </div>
 </div>
 
 <style>
-    /* stormy wobbling animation */
-.stormy-wobble {
-	-webkit-animation: stormy-wobble 3s linear infinite alternate-reverse both;
-	        animation: stormy-wobble 3s linear infinite alternate-reverse both;
+/* fish */
+.fish {
+    animation: fish 3s linear infinite reverse both;
 }
 
+@keyframes fish {
+    0% {
+        transform: rotate(0deg) translateY(0%);
+    }
 
-@keyframes stormy-wobble{
+    25% {
+        transform: rotate(20deg) translateY(-300%);
+    }
+
+    50% {
+        transform: rotate(0deg) translateY(0%);
+    }
+
+    75% {
+        transform: rotate(-20deg) translateY(-300%)
+    }
+
+    100% {
+        transform: rotate(0deg) translateY(0%); 
+    }
+}
+
+/* sparky pan in hand */
+.sparky-pan-hand {
+    animation: sparky-pan-hand 1.5s linear infinite alternate-reverse both;
+  }
+
+  @keyframes sparky-pan-hand {
+    0%, 100% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    50% {
+      -webkit-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+  }
+
+  /* sparky wobbling animation */
+  .sparky-wobble {
+    animation: sparky-wobble 3s linear infinite alternate-reverse both;
+  }
+
+  @keyframes sparky-wobble {
     0%,
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-  }
-  50% {
-    -webkit-transform: translateX(-15px) rotate(-3.6deg);
-            transform: translateX(-15px) rotate(-3.6deg);
-  }
-}
-    
-/* sparky's hand waving animation */
-    .stormy-hand {
-        animation: rotate-15-cw 1.5s linear infinite alternate-reverse both;
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
     }
-    
-    @keyframes rotate-7-cw {
-        0% {
-            -webkit-transform: rotate(0);
-            transform: rotate(0);
-        }
-        100% {
-            -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
-        }
+    50% {
+      transform: translateX(15px) rotate(5deg);
     }
+  }
 
-    @keyframes rotate-15-cw {
-        0% {
-            -webkit-transform: rotate(0);
-            transform: rotate(0);
-        }
-        100% {
-            -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-        }
+  /* stormy wobbling animation */
+  .stormy-wobble {
+    animation: stormy-wobble 3s linear infinite alternate-reverse both;
+  }
+
+  @keyframes stormy-wobble {
+    0%,
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
     }
+    50% {
+      transform: translateX(-15px) rotate(-5deg);
+    }
+  }
+
+  /* stormy's hand waving animation */
+  .stormy-hand {
+    animation: stormy-hand 1.5s linear infinite alternate-reverse both;
+  }
+
+  @keyframes stormy-hand {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(9deg);
+      transform: rotate(9deg);
+    }
+  }
+
+  /* sparky's hand waving animation */
+  .sparky-hand {
+    animation: sparky-hand 1.5s linear infinite alternate-reverse both;
+  }
+
+  @keyframes sparky-hand {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(-9deg);
+      transform: rotate(-9deg);
+    }
+  }
 </style>
