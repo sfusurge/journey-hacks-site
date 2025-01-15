@@ -9,6 +9,7 @@
   import ConveyorBelt from "$lib/components/MainPageParts/ConveyorBelt/conveyorBelt.svelte";
   import Counter from "$lib/components/MainPageParts/counter.svelte";
   import Nav from "$lib/components/Nav/Nav.svelte";
+  import HomeAnimated from "$lib/components/MainPageParts/home-animated.svelte";
 
   let scrollY = $state(0);
   let isTop = $derived(scrollY < 300);
@@ -24,7 +25,8 @@
 <svelte:window bind:scrollY />
 
 <Nav></Nav>
-<Home />
+<HomeAnimated />
+<!-- <Home /> -->
 <Apply />
 <About />
 <Faq />
