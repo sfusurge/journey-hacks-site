@@ -40,8 +40,8 @@
 
     .butter {
         top: 150px;
-        left: -120px;
-        width: 350px;
+        left: -60px;
+        width: 250px;
 
     }
 
@@ -53,13 +53,13 @@
     .pin {
         bottom: 190px;
         left: -100px;
-        width: 400px;
+        width: 250px;
     }
 
     .bowl {
-        bottom: 60px;
-        right: -150px;
-        width: 350px;
+        bottom: 80px;
+        right: -120px;
+        width: 250px;
     }
 
     .center {
