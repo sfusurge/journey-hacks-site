@@ -42,3 +42,9 @@ body {
 html {
   scrollbar-color: #57392e #dfb19b;
 }
+
+.font-coiny {
+  font-family: "Coiny";
+  font-kerning: none;
+  color: #57392e;
+}
