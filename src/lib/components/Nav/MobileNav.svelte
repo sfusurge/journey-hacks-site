@@ -22,7 +22,7 @@
 
 <nav
   id="mobile-nav"
-  class={`w-screen fixed top-0 left-0 z-[999] transition-colors ${scrollY <= 720 ? defaultNav : dockedNav}`}
+  class={`w-screen fixed top-0 left-0 z-[999] transition-colors ${scrollY <= 500 ? defaultNav : dockedNav}`}
 >
   <div class={`w-full p-4 flex justify-between`}>
     <button
@@ -42,7 +42,7 @@
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
-        class={`w-7 h-7 mx-auto hover:scale-125 transition ${scrollY <= 720 ? "text-[#57392E]" : "text-white"}`}
+        class={`w-7 h-7 mx-auto hover:scale-125 transition ${scrollY <= 500 ? "text-[#57392E]" : "text-white"}`}
       >
         {#if !isOpen}
           <path

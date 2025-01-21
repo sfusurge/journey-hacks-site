@@ -62,7 +62,7 @@
     color: #ffebdd;
     border-radius: 15px;
     padding: 25px;
-    font-family: Arial, sans-serif;
+    font-family: "Neue", sans-serif;
     
   }
 
@@ -104,7 +104,7 @@
   }
 
   .section-text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
   }
 

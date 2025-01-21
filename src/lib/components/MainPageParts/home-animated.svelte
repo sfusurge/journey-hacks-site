@@ -1,11 +1,11 @@
 <div class="">
  
   
-  <div class="bg-[#c4d086] relative h-40 xl:h-12">
+  <div class="bg-[#c4d086] relative h-40 md:h-24 xl:h-4">
   </div>
   
   <div class="relative bg-[#8F6455]">
-    <div class="title absolute right-8 -top-20 xl:top-8">
+    <div class="title absolute right-8 -top-20 md:top-0 xl:top-16">
       <span class="font-coiny text-xl md:text-3xl">FEB 14, 2025</span>
       <h1 class="title1 font-coiny text-5xl">JOURNEY</h1>
       <h1 class="-mt-2 md:-mt-4 title2">HACKS</h1>
@@ -219,6 +219,20 @@
   .year {
     font-size: 50px;
   }
+  @media (max-width: 1200px) {
+    .title1 {
+    font-size: 70px;
+  }
+
+  .title2 {
+    font-size: 100px;
+  }
+
+  .year {
+    font-size: 40px;
+  }
+  }
+
 
   @media (max-width: 768px) {
     /* for small screen size */
