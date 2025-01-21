@@ -143,7 +143,7 @@
         }
 
         .butter {
-            top: calc(50% - 450px);
+            top: 0;
             left: calc(50% - 650px);
             width: 450px;
         }
