@@ -13,24 +13,24 @@
     </div>
 
     <img
-      src="/home-animated/background.png"
+      src="/home-animated/background.webp"
       alt="background"
       class="w-full h-auto hidden md:block"
     />
     <img
-      src="/home-animated/foreground.png"
+      src="/home-animated/foreground.webp"
       alt="foreground"
       class="w-full h-auto absolute bottom-0 z-[50] hidden md:block"
     />
 
     <img
-      src="/home-animated/mobile-bg.png"
+      src="/home-animated/mobile-bg.webp"
       alt="background"
       class="w-full h-auto block md:hidden"
     />
 
     <img
-      src="/home-animated/mobile-fg.png"
+      src="/home-animated/mobile-fg.webp"
       alt="foreground"
       class="w-full h-auto absolute bottom-0 z-[50] block md:hidden"
     />
@@ -39,12 +39,12 @@
       class="stormy-wobble absolute md:left-[27.39583%] left-[4%] top-[33.1625%] z-20 md:w-[23.8640625%] h-[37.4450951684%] w-[49.69%]"
     >
       <img
-        src="/home-animated/stormy_head_body.png"
+        src="/home-animated/stormy_head_body.webp"
         alt="stormy"
         class="absolute w-[75.2962744713%] h-auto z-20"
       />
       <img
-        src="/home-animated/stormy_hand_wave.png"
+        src="/home-animated/stormy_hand_wave.webp"
         alt="stormy's hand"
         class="stormy-hand absolute w-[50.020733%] top-[18.18%] h-auto left-[49.9792662433%] z-10 origin-bottom-left"
       />
@@ -54,12 +54,12 @@
       class="sparky-wobble w-[47.608%] md:w-[22.8619791667%] h-[47.9707174231%] absolute left-[48.80208%] top-[22.34407%]"
     >
       <img
-        src="/home-animated/sparky_hand_wave.png"
+        src="/home-animated/sparky_hand_wave.webp"
         alt="sparky's hand"
         class="sparky-hand absolute w-[57.478557456%] h-auto top-[36.7445977292%] z-30 origin-bottom-right"
       />
       <img
-        src="/home-animated/sparky_head_body.png"
+        src="/home-animated/sparky_head_body.webp"
         alt="sparky"
         class="absolute w-[72.6638912575%] h-auto right-0 z-40"
       />
@@ -69,13 +69,13 @@
       class="sparky-wobble w-[47.608%] md:w-[22.8619791667%] h-[47.9707174231%] absolute left-[46.71875%] top-[22.34407%] z-[60]"
     >
       <img
-        src="/home-animated/sparky_arm_with_pan.png"
+        src="/home-animated/sparky_arm_with_pan.webp"
         alt="sparky's frying pan"
         class="sparky-pan-hand absolute w-full h-auto left-[8%] top-[56.00524%] origin-[87.025%_20.8%]"
       />
 
       <img
-        src="/home-animated/fish.png"
+        src="/home-animated/fish.webp"
         alt="fish"
         class="fish rotate-1 absolute w-[36.6784371796%] z-[40] left-[9.32%] top-[70.5227%] h-auto origin-center"
       />

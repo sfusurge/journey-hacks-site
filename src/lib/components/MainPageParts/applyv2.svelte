@@ -3,21 +3,21 @@
     class="aspect-[9/12] md:aspect-video w-100% max-w-[1600px] relative mx-auto"
   >
     <img
-      src="/apply/dough.png"
+      src="/apply/dough.webp"
       alt="dough"
       class="w-[97.4616895874%] absolute top-[33.7427%] left-0
     md:w-[48.6830%] md:left-[23.699%] md:top-[24.075%] pointer-events-none"
     />
 
     <img
-      src="/apply/butter.png"
+      src="/apply/butter.webp"
       alt="butter"
       class="w-[38.657%] absolute top-[17.997%] left-[5.55%]
     md:w-[25.746%] md:top-[10%] md:left-[10%] pointer-events-none"
     />
 
     <img
-      src="/apply/sugar.png"
+      src="/apply/sugar.webp"
       alt="sugar"
       class="w-[35.397%] absolute top-[3.39%] left-[51.577%]
      md:w-[23.57%] md:top-[3.314%] md:left-[70.657%] pointer-events-none"
@@ -36,14 +36,14 @@
     >
 
     <img
-      src="/apply/rolling-pin.png"
+      src="/apply/rolling-pin.webp"
       alt="roll!"
       class="w-[52.77%] absolute top-[67.706%] left-[4.179%]
     md:w-[35.15%] md:top-[63.417%] md:left-[8.59%] pointer-events-none"
     />
 
     <img
-      src="/apply/soup.png"
+      src="/apply/soup.webp"
       alt="soup"
       class="w-[43.2750%] absolute bottom-0 left-[50.630%]
     md:w-[28.82%] md:top-[38%] md:left-[61.38%] pointer-events-none"

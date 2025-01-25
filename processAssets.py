@@ -41,7 +41,7 @@ for file in queue:
         iccBytes = io.BytesIO(iccProfile)
         colorProfile = ImageCms.ImageCmsProfile(iccBytes)
 
-    newPath = file.rstrip(".jpg").rstrip(".png") + ".webp"
+    newPath = file[:-4] + ".webp"
     if resize > 0:
         print(img.width, img.height, (resize, int((resize / img.width) * img.height)))
         img = img.resize(
