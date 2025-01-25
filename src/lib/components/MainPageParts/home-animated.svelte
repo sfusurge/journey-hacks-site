@@ -2,10 +2,14 @@
   <div class="bg-[#c4d086] relative h-40 md:h-24 xl:h-4"></div>
 
   <div class="relative bg-[#8F6455]">
-    <div class="title absolute right-8 -top-20 md:top-0 xl:top-16">
-      <span class="font-coiny text-xl md:text-3xl">FEB 14, 2025</span>
-      <h1 class="title1 font-coiny text-5xl">JOURNEY</h1>
-      <h1 class="-mt-2 title2">HACKS</h1>
+    <div
+      class="title absolute mx-auto w-[100vw] sm:mx-0 sm:right-8 -top-24 md:-top-4 xl:top-16"
+    >
+      <span class="font-coiny mx-auto sm:mx-0 text-xl md:text-3xl"
+        >FEB 14, 2025</span
+      >
+      <h1 class="title1 mx-auto sm:mx-0 font-coiny text-5xl">JOURNEY</h1>
+      <h1 class="-mt-2 mx-auto sm:mx-0 title2">HACKS</h1>
     </div>
 
     <img
@@ -119,7 +123,7 @@
       transform: rotate(0deg);
     }
     50% {
-      transform: rotate(5deg);
+      transform: rotate(10deg);
     }
   }
 
@@ -188,7 +192,6 @@
   }
 
   .title {
-    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -213,6 +216,7 @@
   .year {
     font-size: 50px;
   }
+
   @media (max-width: 1200px) {
     .title1 {
       font-size: 70px;
