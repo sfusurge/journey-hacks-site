@@ -48,3 +48,9 @@ html {
   font-kerning: none;
   color: #57392e;
 }
+
+
+button:disabled, a.disabled{
+  pointer-events: none;
+  filter: brightness(0.7);
+}
