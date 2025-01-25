@@ -20,9 +20,11 @@
 
 <svelte:window bind:scrollY />
 
+$: {console.log(scrollY)}
+
 <nav
   id="mobile-nav"
-  class={`w-screen fixed top-0 left-0 z-[999] transition-colors ${scrollY <= 500 ? defaultNav : dockedNav}`}
+  class={`w-screen fixed top-0 left-0 z-[999] transition-colors ${scrollY <= 326 ? defaultNav : dockedNav}`}
 >
   <div class={`w-full p-4 flex justify-between`}>
     <button
@@ -42,7 +44,7 @@
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
-        class={`w-7 h-7 mx-auto hover:scale-125 transition ${scrollY <= 500 ? "text-[#57392E]" : "text-white"}`}
+        class={`w-7 h-7 mx-auto hover:scale-125 transition ${scrollY <= 326 ? "text-[#57392E]" : "text-white"}`}
       >
         {#if !isOpen}
           <path
@@ -79,7 +81,7 @@
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M14.9695 30.9268C23.2369 30.9268 29.939 24.2247 29.939 15.9573C29.939 7.68986 23.2369 0.987793 14.9695 0.987793C6.70207 0.987793 0 7.68986 0 15.9573C0 24.2247 6.70207 30.9268 14.9695 30.9268ZM10.6408 17.0278L15.8901 3.58291L19.9408 10.4885L14.8445 14.066L17.3959 17.2498L19.9471 20.4338L11.83 26.657L14.2999 18.3678L10.6408 17.0278Z"
-          fill={scrollY <= 720 ? "#57392E" : `#FFFFFF`}
+          fill={scrollY <= 326 ? "#57392E" : `#FFFFFF`}
         ></path>
       </svg>
     </a>
@@ -98,7 +100,7 @@
         <a
           href={url}
           class={`${
-            scrollY <= 720
+            scrollY <= 326
               ? "text-[#57392E] hover:text-[#1A672B]"
               : "text-white hover:text-[#c4d086]"
           } font-medium text-lg`}>{name}</a
@@ -106,7 +108,7 @@
       {/each}
       <a
         href="#apply"
-        class={`${scrollY <= 720 ? "bg-[#57392E] hover:bg-[#231813] hover:text-[#CE9788] text-white" : "bg-[#c4d086] hover:bg-[#d0d99e] text-[#57392E]"} -mt-1 text-lg text-center font-medium w-fit px-6 py-2 rounded-md`}
+        class={`${scrollY <= 326 ? "bg-[#57392E] hover:bg-[#231813] hover:text-[#CE9788] text-white" : "bg-[#c4d086] hover:bg-[#d0d99e] text-[#57392E]"} -mt-1 text-lg text-center font-medium w-fit px-6 py-2 rounded-md`}
         >Apply</a
       >
       <div class="h-4 w-full"></div>

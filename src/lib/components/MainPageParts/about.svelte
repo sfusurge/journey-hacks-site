@@ -1,8 +1,8 @@
 <script lang="ts">
-    import StickyLabel from "../StickyLabel.svelte";
-
+  import StickyLabel from "../StickyLabel.svelte";
 </script>
-<div class="background">
+
+<div class="background" id="about">
   <div class="content-container">
     <StickyLabel>About</StickyLabel>
 
@@ -63,7 +63,6 @@
     border-radius: 15px;
     padding: 25px;
     font-family: "Neue", sans-serif;
-    
   }
 
   .header-container {
@@ -72,7 +71,6 @@
     height: 120px;
     border-radius: 15px 15px 0 0;
     overflow: hidden;
-    
   }
 
   .header-image {
@@ -113,23 +111,18 @@
   }
 
   img {
-
     width: 100%;
     max-width: unset;
   }
 
-
   @media screen and (max-width: 900px) {
-
-
     img {
-        width: 100%;
-        height: auto;
+      width: 100%;
+      height: auto;
     }
 
-
-    .background{
-        height: fit-content;
+    .background {
+      height: fit-content;
     }
 
     .content-container {
@@ -145,7 +138,6 @@
     .header-container {
       border-radius: 0;
     }
-
 
     .header-text {
       position: absolute;

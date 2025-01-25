@@ -1,29 +1,42 @@
-<div class="">
- 
-  
-  <div class="bg-[#c4d086] relative h-40 md:h-24 xl:h-4">
-  </div>
-  
-  <div class="relative bg-[#8F6455]">
-    <div class="title absolute right-8 -top-20 md:top-0 xl:top-16">
-      <span class="font-coiny text-xl md:text-3xl">FEB 14, 2025</span>
-      <h1 class="title1 font-coiny text-5xl">JOURNEY</h1>
-      <h1 class="-mt-2 md:-mt-4 title2">HACKS</h1>
+<div class="max-w-screen overflow-x-hidden">
+  <div class="bg-[#c4d086] relative h-40 md:h-24 xl:h-4"></div>
+
+  <div class="relative bg-[#8F6455] aspect-[0.67/1] md:aspect-[1.41/1]">
+    <div
+      class="title absolute mx-auto w-[100vw] sm:mx-0 sm:right-8 -top-16 md:-top-4 xl:top-16"
+    >
+      <span class="font-coiny mx-auto sm:mx-0 text-xl lg:text-3xl"
+        >FEB 14, 2025</span
+      >
+      <h1 class="title1 mx-auto sm:mx-0 font-coiny text-5xl">JOURNEY</h1>
+      <h1 class="-mt-2 mx-auto sm:mx-0 title2">HACKS</h1>
     </div>
-    
+
     <img
       src="/home-animated/background.png"
       alt="background"
-      class="w-full h-auto"
+      class="w-full h-auto hidden md:block"
     />
     <img
       src="/home-animated/foreground.png"
       alt="foreground"
-      class="w-full h-auto absolute bottom-0 z-[50]"
+      class="w-full h-auto absolute bottom-0 z-[50] hidden md:block"
+    />
+
+    <img
+      src="/home-animated/mobile-bg.png"
+      alt="background"
+      class="w-full h-auto block md:hidden"
+    />
+
+    <img
+      src="/home-animated/mobile-fg.png"
+      alt="foreground"
+      class="w-full h-auto absolute bottom-0 z-[50] block md:hidden"
     />
 
     <div
-      class="stormy-wobble absolute left-[27.39583%] top-[33.1625%] z-20 w-[23.8640625%] h-[37.4450951684%]"
+      class="stormy-wobble absolute md:left-[27.39583%] left-[4%] top-[33.1625%] z-20 md:w-[23.8640625%] h-[37.4450951684%] w-[49.69%]"
     >
       <img
         src="/home-animated/stormy_head_body.png"
@@ -37,10 +50,8 @@
       />
     </div>
 
-  
-
     <div
-      class="sparky-wobble w-[22.8619791667%] h-[47.9707174231%] absolute left-[48.80208%] top-[22.34407%]"
+      class="sparky-wobble w-[47.608%] md:w-[22.8619791667%] h-[47.9707174231%] absolute left-[48.80208%] top-[22.34407%]"
     >
       <img
         src="/home-animated/sparky_hand_wave.png"
@@ -52,80 +63,79 @@
         alt="sparky"
         class="absolute w-[72.6638912575%] h-auto right-0 z-40"
       />
-
-    
     </div>
 
     <div
-        class="sparky-wobble w-[22.8619791667%] h-[47.9707174231%] absolute left-[46.71875%] top-[22.34407%] z-[60]"
-      >
-        <img
-          src="/home-animated/sparky_arm_with_pan.png"
-          alt="sparky's frying pan"
-          class="sparky-pan-hand absolute w-full h-auto left-[8%] top-[56.00524%] origin-[87.025%_20.8%]"
-        />
+      class="sparky-wobble w-[47.608%] md:w-[22.8619791667%] h-[47.9707174231%] absolute left-[46.71875%] top-[22.34407%] z-[60]"
+    >
+      <img
+        src="/home-animated/sparky_arm_with_pan.png"
+        alt="sparky's frying pan"
+        class="sparky-pan-hand absolute w-full h-auto left-[8%] top-[56.00524%] origin-[87.025%_20.8%]"
+      />
 
-        <img
-          src="/home-animated/fish.png"
-          alt="fish"
-          class="fish absolute w-[36.6784371796%] z-[40] left-[9.32%] top-[70.5227%] h-auto origin-center"
-        />
-      </div>
+      <img
+        src="/home-animated/fish.png"
+        alt="fish"
+        class="fish rotate-1 absolute w-[36.6784371796%] z-[40] left-[9.32%] top-[70.5227%] h-auto origin-center"
+      />
+    </div>
   </div>
 </div>
 
 <style>
-/* fish */
-.fish {
-       animation: bounce 1s ease-in;
-			animation-iteration-count:infinite;
-			 animation-direction: alternate;
-}
+  /* fish */
+  .fish {
+    animation: bounce 1s ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 
-@keyframes bounce{
- from {
-	 transform: translateY(-200%);
- }
+  @keyframes bounce {
+    from {
+      transform: translateY(-200%);
+    }
 
-	to {
-		transform:  translateY(0%);
-	}
-}
+    to {
+      transform: translateY(0%);
+    }
+  }
 
-@keyframes fish {
+  @keyframes fish {
     0% {
-        transform: rotate(0deg) translateY(0%);
+      transform: rotate(0deg) translateY(0%);
     }
 
     25% {
-        transform: rotate(20deg) translateY(-300%);
+      transform: rotate(20deg) translateY(-300%);
     }
 
     50% {
-        transform: rotate(0deg) translateY(0%);
+      transform: rotate(0deg) translateY(0%);
     }
 
     75% {
-        transform: rotate(-20deg) translateY(-300%)
+      transform: rotate(-20deg) translateY(-300%);
     }
 
     100% {
-        transform: rotate(0deg) translateY(0%); 
+      transform: rotate(0deg) translateY(0%);
     }
-}
+  }
 
-/* sparky pan in hand */
-.sparky-pan-hand {
+  /* sparky pan in hand */
+  .sparky-pan-hand {
     animation: sparky-pan-hand 2s linear infinite alternate-reverse both;
   }
 
   @keyframes sparky-pan-hand {
-    0%, 100% {
+    0%,
+    100% {
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     50% {
-      transform: rotate(7.5deg);
+      transform: rotate(10deg);
     }
   }
 
@@ -194,7 +204,6 @@
   }
 
   .title {
-    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -219,22 +228,22 @@
   .year {
     font-size: 50px;
   }
+
   @media (max-width: 1200px) {
     .title1 {
-    font-size: 70px;
+      font-size: 70px;
+    }
+
+    .title2 {
+      font-size: 100px;
+    }
+
+    .year {
+      font-size: 40px;
+    }
   }
 
-  .title2 {
-    font-size: 100px;
-  }
-
-  .year {
-    font-size: 40px;
-  }
-  }
-
-
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     /* for small screen size */
 
     .title1 {
@@ -246,7 +255,7 @@
     }
 
     .year {
-      font-size: 12px;
+      font-size: 20px;
     }
   }
 </style>
