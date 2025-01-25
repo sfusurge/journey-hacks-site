@@ -5,7 +5,7 @@
     <div
       class="title absolute mx-auto w-[100vw] sm:mx-0 sm:right-8 -top-24 md:-top-4 xl:top-16"
     >
-      <span class="font-coiny mx-auto sm:mx-0 text-xl md:text-3xl"
+      <span class="font-coiny mx-auto sm:mx-0 text-xl lg:text-3xl"
         >FEB 14, 2025</span
       >
       <h1 class="title1 mx-auto sm:mx-0 font-coiny text-5xl">JOURNEY</h1>
@@ -231,7 +231,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     /* for small screen size */
 
     .title1 {
