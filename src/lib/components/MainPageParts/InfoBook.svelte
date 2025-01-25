@@ -1,8 +1,8 @@
 <script lang="ts">
   import Book from "$lib/components/book/Book.svelte";
   import StickyLabel from "../StickyLabel.svelte";
-  const imgUrls = [1, 3, 5, 7, 11, 13, 15].map(
-    (idx) => `/bookpages/${idx}.webp`
+  const imgUrls = [...Array(18).keys()].map(
+    (idx) => `/bookpages/${idx+1}.webp`
   );
   const backPageUrl = "/bookpages/0.webp";
 
