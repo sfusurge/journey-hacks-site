@@ -14,7 +14,7 @@
 
 <div class="accordion">
   <button
-    class="button flex flex-row items-center content-between w-full font-large text-lg tracking-wide"
+    class="button flex flex-row items-center content-between w-full lg:font-large text-lg tracking-wide"
     onclick={() => (isOpen = !isOpen)}
   >
     <div class="w-full text-left">{question}</div>

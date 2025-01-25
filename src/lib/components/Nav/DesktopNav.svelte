@@ -10,8 +10,6 @@
 
 <svelte:window bind:scrollY />
 
-$: {console.log(scrollY)}
-
 <nav
   id="desktop-nav"
   class={`flex fixed inset-x-0 mx-auto p-4 z-[999] items-center w-full justify-between ${scrollY <= 530 ? defaultNav : dockedNav}`}

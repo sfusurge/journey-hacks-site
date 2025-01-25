@@ -1,4 +1,4 @@
-<div class="w-screen bg-[#8F6455] -mt-20 relative z-[200]">
+<div class="w-screen bg-[#8F6455] relative">
   <div
     class="aspect-[9/12] md:aspect-video w-100% max-w-[1600px] relative mx-auto"
   >
