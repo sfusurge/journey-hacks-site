@@ -21,9 +21,9 @@
 
   let conveyorWidth = $state(0);
 
-  const maxCount = 10;
+  const maxCount = 15;
   function addImages() {
-    if (Math.random() < 0.6) {
+    if (Math.random() < 0.2) {
       return;
     }
 
@@ -35,7 +35,7 @@
 
       setTimeout(() => {
         shownImages.shift();
-      }, 100000);
+      }, 10000);
 
       imgIdx++;
     }
@@ -45,7 +45,7 @@
     /**
      * in react you would do useEffect(()=>{...}, []); (empty dependency array means only run once onMount)
      */
-    setInterval(addImages, 1100);
+    setInterval(addImages, 1000);
   });
 </script>
 
@@ -54,8 +54,7 @@
 >
   <div
     bind:clientWidth={conveyorWidth}
-    style="--conveyorWidth: {conveyorWidth}px"
-    class="relative min-w-[1000px] max-w-[100vw] -mt-[1px]"
+    class="conyeyorRoot relative min-w-[1000px] max-w-[100vw] -mt-[1px]"
   >
     <img
       alt="background with ledge"
@@ -78,6 +77,7 @@
           <ConveyorItem
             url={`/conveyor-belt/${foodInfo.url}`}
             id={foodInfo.imgId}
+            width={conveyorWidth}
           ></ConveyorItem>
         {/each}
       </div>

@@ -1,11 +1,21 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
   interface Props {
     url: string;
     id: number;
+    width: number;
   }
 
-  let { url, id }: Props = $props();
+  let { url, id, width }: Props = $props();
 
+  let startScroll = $state(false);
+  onMount(() => {
+    setTimeout(() => {
+      startScroll = true;
+    }),
+      100;
+  });
   let bites = $state(-1);
 </script>
 
@@ -13,6 +23,8 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
   class="imgHolder m-scroll"
+  style=" --conveyorWidth:{-width}px;"
+  class:translated={startScroll}
   onclick={() => {
     bites++;
   }}
@@ -76,21 +88,18 @@
   }
 
   .m-scroll {
-    animation: scroll 100s linear infinite;
     position: absolute;
     left: 100%;
     top: 0;
     width: 11.1656%;
     min-width: 100px;
     height: auto;
+
+    transform: translateX(0);
+    transition: transform 10s linear;
   }
 
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(- var(--conveyorWidth) - 100%));
-    }
+  .translated {
+    transform: translateX(calc(var(--conveyorWidth) - 100%));
   }
 </style>
