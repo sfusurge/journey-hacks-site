@@ -2,7 +2,6 @@
     import { untrack } from "svelte";
     import BookPage from "./BookPage.svelte";
 
-    
     interface BookType {
         imgUrls: string[];
         index?: number;
@@ -39,6 +38,8 @@
 
         return out;
     });
+
+    $inspect(pages, pages[index])
 
     let prevUrl: string | undefined = $state();
     let nextUrl: string | undefined = $state(pages[0].frontPage);
@@ -82,6 +83,9 @@
 
         setTimeout(() => {
             prevUrl = transitionPage?.backPage;
+        }, transitionTime - 100);
+
+        setTimeout(() => {
             transitionPage = undefined;
         }, transitionTime);
     }
@@ -98,12 +102,15 @@
 
         setTimeout(() => {
             nextUrl = transitionPage?.frontPage;
+        }, transitionTime - 100);
+
+        setTimeout(() => {
             transitionPage = undefined;
         }, transitionTime);
     }
 
     export function nextPage() {
-        if (index === pages.length - 1) {
+        if (index === pages.length) {
             return;
         }
 
@@ -132,10 +139,10 @@
 </script>
 
 <svelte:head>
-    <link rel="prefetch" href={pages[index].backPage} as="image" fetchpriority="low" />
+    <link rel="prefetch" href={pages[index]?.backPage} as="image" fetchpriority="low" />
 
     {#if index + 1 < pages.length}
-        <link rel="prefetch" href={pages[index + 1].frontPage} as="image" fetchpriority="low" />
+        <link rel="prefetch" href={pages[index + 1]?.frontPage} as="image" fetchpriority="low" />
     {/if}
 </svelte:head>
 
@@ -152,17 +159,15 @@
         style="scale:{singlePageMode ? 1 : perspectiveScaleRatio}; transform: perspective(2000px) rotateX({angle}deg);"
         bind:clientHeight={innerHeight}
     >
-
         <BookPage
             frontUrl={transitionPage ? transitionPage.frontPage : ""}
             backUrl={transitionPage ? (transitionPage.backPage ?? backUrl) : ""}
             {index}
             animationTime={transitionTime}
             {singlePageMode}
-        ></BookPage> 
+        ></BookPage>
 
         <div
-   
             class="page prev"
             onclick={prevPage}
             onkeydown={(e) => {
@@ -172,10 +177,9 @@
             tabindex="0"
             class:singlePage={singlePageMode}
         >
-            <img  class:noUrl={prevUrl === undefined} src={prevUrl ?? backUrl} alt="" />
+            <img class:noUrl={prevUrl === undefined} src={prevUrl ?? backUrl} alt="" />
         </div>
         <div
-     
             class="page next"
             onclick={nextPage}
             onkeydown={(e) => {

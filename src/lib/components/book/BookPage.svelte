@@ -85,7 +85,6 @@
         opacity: 0;
 
         pointer-events: none;
-
     }
 
     .pageRoot.flip {
@@ -102,6 +101,8 @@
         height: 100%;
         transform-style: preserve-3d;
         backface-visibility: hidden;
+
+        z-index: 100;
     }
 
     .pageSide > .pageSegment {
@@ -121,14 +122,13 @@
         transform-origin: left;
 
         outline: 1px solid transparent;
-
     }
 
     .pageSegment::before {
         content: "";
 
         position: absolute;
-        width:round(up, 100%, 2px);
+        width: round(up, 100%, 2px);
         height: 100%;
         top: 0;
         left: 0;
@@ -137,8 +137,6 @@
         background-size: 800% 100%;
         background-position-x: calc(-1 * var(--idx) * 100%);
         backface-visibility: hidden;
-
-
     }
 
     .pageSegment::after {
@@ -155,8 +153,6 @@
         transform-origin: center;
         transform: rotateY(180deg);
         backface-visibility: hidden;
- 
-
     }
 
     .flip > .pageSide * {

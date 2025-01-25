@@ -20,7 +20,6 @@
 
 <svelte:window bind:scrollY />
 
-$: {console.log(scrollY)}
 
 <nav
   id="mobile-nav"
