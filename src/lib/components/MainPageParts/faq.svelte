@@ -77,24 +77,27 @@
 </script>
 
 <div id="faq">
-  <div class="labelContainer"><StickyLabel>FAQ</StickyLabel></div>
-  <div class="max-w-[960px] mx-auto grid md:grid-cols-2 gap-3 md:gap-8">
-    <div class="flex flex-col gap-3">
-      {#each FaqObjects.slice(0, Math.ceil(FaqObjects.length / 2)) as faq}
-        <Accordion question={faq.question} answer={faq.answer}></Accordion>
-      {/each}
-    </div>
+  <div style="display: flex; flex-direction:column; gap:1rem; width:fit-content; margin-left:auto; margin-right:auto;">
+    <StickyLabel>FAQ</StickyLabel>
 
-    <div class="flex flex-col gap-3">
-      {#each FaqObjects.slice(Math.ceil(FaqObjects.length / 2)) as faq}
-        <Accordion question={faq.question} answer={faq.answer}></Accordion>
-      {/each}
-      <Accordion
-        question="How can I learn more about your hackathons?"
-        answer="We are always available for questions about our hackathons on our "
-        link="https://discord.com/invite/dZN7SXaQ"
-        linkText="Discord"
-      ></Accordion>
+    <div class="max-w-[960px] mx-auto grid md:grid-cols-2 gap-3 md:gap-8">
+      <div class="flex flex-col gap-3">
+        {#each FaqObjects.slice(0, Math.ceil(FaqObjects.length / 2)) as faq}
+          <Accordion question={faq.question} answer={faq.answer}></Accordion>
+        {/each}
+      </div>
+
+      <div class="flex flex-col gap-3">
+        {#each FaqObjects.slice(Math.ceil(FaqObjects.length / 2)) as faq}
+          <Accordion question={faq.question} answer={faq.answer}></Accordion>
+        {/each}
+        <Accordion
+          question="How can I learn more about your hackathons?"
+          answer="We are always available for questions about our hackathons on our "
+          link="https://discord.com/invite/dZN7SXaQ"
+          linkText="Discord"
+        ></Accordion>
+      </div>
     </div>
   </div>
 </div>
