@@ -42,7 +42,7 @@
       </svg>
     </a>
 
-    <a href="#apply" class="link">Apply</a>
+    <a href="https://portal.sfusurge.com/" class="link">Apply</a>
     <a href="#about" class="link">About</a>
     <a href="#faq" class="link">FAQ</a>
     <a href="#our_team" class="link">Our Team</a>
