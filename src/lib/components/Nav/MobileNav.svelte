@@ -20,7 +20,6 @@
 
 <svelte:window bind:scrollY />
 
-
 <nav
   id="mobile-nav"
   class={`w-screen fixed top-0 left-0 z-[999] transition-colors ${scrollY <= 326 ? defaultNav : dockedNav}`}
@@ -106,7 +105,7 @@
         >
       {/each}
       <a
-        href="#apply"
+        href="https://portal.sfusurge.com/"
         class={`${scrollY <= 326 ? "bg-[#57392E] hover:bg-[#231813] hover:text-[#CE9788] text-white" : "bg-[#c4d086] hover:bg-[#d0d99e] text-[#57392E]"} -mt-1 text-lg text-center font-medium w-fit px-6 py-2 rounded-md`}
         >Apply</a
       >
