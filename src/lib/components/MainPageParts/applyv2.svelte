@@ -24,15 +24,13 @@
     />
 
     <a
-      class:disabled={true}
-      href="https://portal.sfusurge.com/"
+      href="https://portal.sfusurge.com/application"
       style="padding:1rem"
       class="text-center max-w-[255px] py-[2.6375%] md:py-[1.25%] absolute bg-[#5562EE] w-fit block text-[#A7C4FA] text-[100%] rounded-xl rotate-[-15deg] left-[27.2%] md:left-[34.69%] sm:left-[25.69%] top-[56.538%] md:top-[50.5%] hover:scale-105 transition min-[440px]:text-[120%] sm:text-[150%] lg:text-[175%]"
       >Hacker</a
     >
 
     <a
-      class:disabled={true}
       href="https://forms.gle/HZPBKL9fHwVj25ca6"
       style="padding:1rem"
       class="text-center max-w-[255px] py-[2.6375%] md:py-[1.25%] absolute bg-[#FFBE77] w-fit block text-[#FFF6D2] text-[100%] rounded-xl rotate-[15deg] left-[52.4577%] md:left-[49.2%] sm:left-[55.2%] top-[56.538%] md:top-[50.5%] hover:scale-105 transition min-[440px]:text-[120%] sm:text-[150%] lg:text-[175%]"

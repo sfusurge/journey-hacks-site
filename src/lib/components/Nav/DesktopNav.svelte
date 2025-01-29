@@ -16,8 +16,7 @@
 >
   <div class="flex gap-6 items-center text-lg font-medium">
     <a
-      href="https://portal.sfusurge.com/"
-      class:disabled={true}
+      href="https://portal.sfusurge.com/application"
       class={`${scrollY <= 530 ? "bg-[#57392E] hover:bg-[#231813] hover:text-[#CE9788] transition text-white" : "bg-[#c4d086] hover:bg-[#d0d99e] transition text-[#57392E]"} block h-[2.75rem] w-fit px-4 py-2 rounded-md`}
       >Apply</a
     >
