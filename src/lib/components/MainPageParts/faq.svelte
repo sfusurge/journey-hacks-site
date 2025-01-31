@@ -11,7 +11,7 @@
     {
       question: "What is JourneyHacks?",
       answer:
-        "JourneyHacks is an 12 hour hackathon where beginners are encouraged to utilize skills learnt in our JourneyHacks workshops as well as existing skills to create a project. Teams and individual participants are encouraged to collaborate, create meaningful impact, and challenge other teams.",
+        "JourneyHacks is a 12 hour hackathon where beginners are encouraged to utilize skills learnt in our JourneyHacks workshops as well as existing skills to create a project. Teams and individual participants are encouraged to collaborate, create meaningful impact, and challenge other teams.",
     },
     {
       question: "What should I bring?",
