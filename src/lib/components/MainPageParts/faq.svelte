@@ -11,7 +11,7 @@
     {
       question: "What is JourneyHacks?",
       answer:
-        "JourneyHacks is an 8 hour hackathon where beginners are encouraged to utilize skills learnt in our JourneyHacks workshops as well as existing skills to create a project. Teams and individual participants are encouraged to collaborate, create meaningful impact, and challenge other teams.",
+        "JourneyHacks is an 12 hour hackathon where beginners are encouraged to utilize skills learnt in our JourneyHacks workshops as well as existing skills to create a project. Teams and individual participants are encouraged to collaborate, create meaningful impact, and challenge other teams.",
     },
     {
       question: "What should I bring?",
@@ -31,7 +31,7 @@
     {
       question: "Where and when will JourneyHacks be?",
       answer:
-        "JourneyHacks will take place at SFU Burnaby in the Math building WMC 2200 from 12:30pm to 8:30pm. The sign in desk, opening presentation, some workshops will take place here. A few other workshops will be located in WMC 2202. Participants are free to spread out around campus while they work on their projects.",
+        "JourneyHacks will take place at SFU Burnaby in the Math building WMC 2200 from 9am to 9pm. The sign in desk, opening presentation, some workshops will take place here. A few other workshops will be located in WMC 2202. Participants are free to spread out around campus while they work on their projects.",
     },
     {
       question: "What can I do if I don’t have a team?",
@@ -46,7 +46,7 @@
     {
       question: "Do I need to stay for the entire event?",
       answer:
-        "While we encourage you to stay for the full event to get the most out of the experience, we understand that may not be possible for everyone. Feel free to attend either half of the day with just the workshops or the full day of hacking, whatever works for you! But remember that being there for the whole event maximizes learning and collaboration opportunities.",
+        "We understand that students have classes and other commitments, so JourneyHacks is designed to be flexible. We welcome you to drop in and out as needed, making it easy to tailor your experience to the workshops, mentorship, and activities that interest you most.",
     },
     {
       question: "Can I work on a previous project?",
@@ -66,7 +66,7 @@
     {
       question: "Will food be provided?",
       answer:
-        "Yes, an afternoon snack and dinner will be provided to all hackers.",
+        "Yes, lunch and dinner will be provided with drinks to all hackers.",
     },
     {
       question: "What kind of activities will there be?",
