@@ -1,4 +1,4 @@
-<div class="footer bg-[#8F6455] flex flex-row sm:flex-col p-6 sm:pb-8">
+<div class="footer flex flex-row sm:flex-col p-6 sm:pb-8">
   <svg
     width="169"
     height="85"
