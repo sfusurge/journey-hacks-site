@@ -94,7 +94,7 @@
         <Accordion
           question="How can I learn more about your hackathons?"
           answer="We are always available for questions about our hackathons on our "
-          link="https://discord.com/invite/dZN7SXaQ"
+          link="https://discord.gg/Rg4mwHvKjd"
           linkText="Discord"
         ></Accordion>
       </div>
