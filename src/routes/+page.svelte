@@ -11,6 +11,7 @@
   import Nav from "$lib/components/Nav/Nav.svelte";
   import HomeAnimated from "$lib/components/MainPageParts/home-animated.svelte";
   import Applyv2 from "$lib/components/MainPageParts/applyv2.svelte";
+  import Sponsors from "$lib/components/MainPageParts/Sponsors.svelte";
 
   let scrollY = $state(0);
   let isTop = $derived(scrollY < 300);
@@ -35,4 +36,5 @@
 <InfoBook />
 <Counter />
 <ConveyorBelt />
+<Sponsors/>
 <Footer />
