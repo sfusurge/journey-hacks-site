@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { SvelteDate } from "svelte/reactivity";
 
-  const hackathonDate = new Date(2025, 1, 15, 9, 0, 0);
+  const hackathonDate = new Date(2025, 1, 14, 9, 0, 0);
   let nowDate = $state(new Date());
 
   let difference = $derived(
