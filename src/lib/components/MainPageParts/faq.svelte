@@ -31,7 +31,7 @@
     {
       question: "Where and when will JourneyHacks be?",
       answer:
-        "JourneyHacks will take place at SFU Burnaby in the Math building WMC 2200 from 9am to 9pm. The sign in desk, opening presentation, some workshops will take place here. A few other workshops will be located in WMC 2202. Participants are free to spread out around campus while they work on their projects.",
+        "JourneyHacks will take place at SFU Burnaby in the Applied Science Building (ASB) from 9am to 9pm. The sign in desk, opening presentation, and workshops will also take place here. Participants are free to spread out around campus while they work on their projects.",
     },
     {
       question: "What can I do if I don’t have a team?",
@@ -77,7 +77,9 @@
 </script>
 
 <div id="faq">
-  <div style="display: flex; flex-direction:column; gap:1rem; width:fit-content; margin-left:auto; margin-right:auto;">
+  <div
+    style="display: flex; flex-direction:column; gap:1rem; width:fit-content; margin-left:auto; margin-right:auto;"
+  >
     <StickyLabel>FAQ</StickyLabel>
 
     <div class="max-w-[960px] mx-auto grid md:grid-cols-2 gap-3 md:gap-8">
